@@ -1,0 +1,329 @@
+\documentclass[memoire, 12pt]{report}
+\usepackage[top = 1.9cm, bottom = 1.5cm, left = 1.9cm, right = 2.1cm]{geometry}
+\usepackage{graphicx} 
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{multirow}
+\usepackage{multibib}
+\usepackage{multirow}
+\usepackage{tabularx}
+\newcites{biblio}{Bibliographie}
+\newcites{other}{Autres r\'ef\'erences}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[babel=true]{csquotes}
+\setlength{\fboxrule}{0.01cm}
+\setlength{\fboxsep}{0.5cm}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{url}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{glossaries}
+%\usepackage[thinlines]{easytable}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+\usepackage[bottom]{footmisc}
+%\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{glossaries}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage[utf8]{inputenc}   % encodage du fichier source
+\usepackage[T1]{fontenc}      % encodage des polices
+\usepackage[french]{babel}    % pour le français
+
+% Configuration des styles pour le code Python
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{python}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=python}
+
+
+
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+%\usepackage{fancyhdr}
+\usepackage[Conny]{fncychap}
+%Conny
+%Bjornstrup
+%\pagestyle{Conny}
+\usepackage[french]{babel}
+%\renewcommand{\footrulewidth}{3pt}
+\makeglossaries
+\title{TAF_N1_NGWAMBE MARIELLA}
+\author{}
+\date{MOIS_ICI 2025}
+
+\begin{document}
+\begin{titlepage}
+
+	\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+		\draw[orange!90!orange,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+		
+		\draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+		([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+		
+		
+		\draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+		([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+	\end{tikzpicture}
+	\begin{center}
+		\begin{tabular}{l*{40}{@{\hskip.05mm}c@{\hskip.8mm}} c c}
+			\begin{tabular}{c}
+				
+		\footnotesize{\textbf{R\'EPUBLIQUE DU CAMEROUN}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Paix - Travail - Patrie}} \\
+				
+			\scriptsize{\textbf{******************}}\\ 
+			\footnotesize{	\textbf{UNIVERSIT\'E DE YAOUND\'E I}}\\
+				
+			\scriptsize{	\textbf{****************}} \\
+				
+			\footnotesize{	\textbf{ECOLE NATIONALE SUPERIEURE}} \\
+			\footnotesize{	\textbf{POLYTECHNIQUE DE YAOUNDE}} \\
+				
+			\scriptsize{	\textbf{****************}} \\
+		   \scriptsize{	\textbf{D\'EPARTEMENT DE GENIE}}\\
+		   \scriptsize{	\textbf{INFORMATIQUE}}\\
+				
+			\scriptsize{	\textbf{****************}}\\
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\includegraphics[height=4cm, width=2.8cm]{po.png}
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\footnotesize{\textbf{ REPUBLIC OF CAMEROON}} \\
+				
+				\footnotesize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Peace - Work - Fatherland}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\footnotesize{\textbf{UNIVERSITY OF YAOUNDE I}}\\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+				\footnotesize{\textbf{NATIONAL ADVANCED SCHOOL}} \\
+				\footnotesize{\textbf{OF ENGINEERING OF YAOUNDE}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\scriptsize{\textbf{DEPARTMENT OF COMPUTER}}\\
+				\scriptsize{\textbf{ENGINEERING}}\\
+				
+				\footnotesize{\textbf{****************}}\\
+				
+			\end{tabular}	
+		\end{tabular}
+	
+		\vspace{0.5cm}
+		\begin{tabular}{l*{40}{@{\hskip 3.5cm}c@{\hskip5cm}} p{3.5cm} r}
+		\end{tabular}
+		
+		\noindent\rule{\textwidth}{0.7mm}
+		\Large{{\textbf{CHAPITRE 1}}}\\
+		\Large{{\textbf{\textit{EXERCICES}}}}
+		\noindent\rule{\textwidth}{0.7mm}
+	\end{center}
+		
+	\begin{center}
+	\begin{tabular}{c}
+		
+		\vspace{0.1cm}
+		\normalsize
+	
+	
+		\vspace{0.1cm}
+		\normalsize\textbf{Option }:\\			
+		\textsl{Cybersécurité et Investigation Numérique}
+		
+	\end{tabular}
+	\end{center}
+		
+	\begin{center}
+		\normalsize %\hspace{-2cm}
+		\begin{tabular}{c}
+			\vspace{0.07cm}
+			\hspace{0.02cm} \textbf{\textbf{Rédigé par :}}\\
+			\hspace{0.02cm} \textsl{\textbf{NGWAMBE  MARIELLA}, 22P040}\\\\
+			
+		\end{tabular}
+	\end{center}
+	
+	\begin{center}
+	\hspace{0.02cm} \textbf{Sous l'encadrement de:}\\
+	\hspace{0.02cm} \textsl{M. Thierry MINKA}
+	\end{center}
+	
+    
+	\vspace{2cm}
+	\begin{center}
+		\textbf{Année académique 2025 / 2026}
+	\end{center}
+		
+	\vspace{-1.4cm}
+	
+		
+	\vfill%\null
+	
+\end{titlepage}
+\begin{document}
+ \chapter{} PARTIE 1: 
+   \section{ Exercice 1}
+ \paragraph{} — Paradoxe de la transparence}
+La « société de la transparence » décrite par Byung-Chul Han met en lumière
+une tension essentielle : la volonté de tout rendre visible pour protéger la
+démocratie et lutter contre la corruption, contre le droit fondamental à l'intimité.
+Dans l'espace numérique, onde de traçabilité et d'indexation, la transparence
+fonctionne comme remède et poison : elle améliore la reddition de comptes
+mais fragilise la sphère privée, creuse les asymétries d'information et
+expose les individus à des formes nouvelles de violence symbolique.
+Considérée sous l'angle de l'investigation numérique, cette tension se traduit
+par un conflit entre deux impératifs légitimes : la recherche de preuves et la
+protection des données personnelles.
+
+Un cas paradigmatique est l'accès aux logs d'un service public dans le cadre
+d'une enquête sur la corruption. L'ouverture de ces traces permet de
+reconsitituer les chaînes d'événements, d'identifier des acteurs et de
+garantir la transparence administrative. En revanche, la divulgation de ces
+logs risque d'exposer des citoyens innocents, de révéler des habitudes
+sensible ou des éléments protégés par le secret professionnel. Le risque n'est
+pas seulement individuel : l'obsession de la traçabilité érode la confiance,
+puisque les usagers modifient leurs comportements pour éviter d'être
+surveillés, limitant l'accès à l'information et appauvrissant l'espace public.
+
+L'éthique kantienne offre un cadrage normatif pertinent. Le principe moral
+fondamental kantien — agir de telle sorte que l'humanité soit toujours
+traitée comme une fin et jamais seulement comme un moyen — impose
+une contrainte sur l'usage de la transparence. Appliqué à l'investigation
+numérique, ce principe exige que la collecte, la conservation et la divulgation
+des preuves ne traitent jamais la personne comme simple ressource
+informationnelle. Concrètement, cela se traduit par des règles de proportionnalité,
+de minimisation des données, d'anonymisation lorsque possible, et d'un
+contrôle judiciaire effectif pour autoriser l'accès aux informations sensibles.
+
+Une résolution pratique combine plusieurs leviers : (i) \emph{principe de
+minimisation} : ne collecter que ce qui est strictement nécessaire ; (ii)
+\emph{garde-fou procédural} : autorisation judiciaire préalable pour les
+accès intrusifs ; (iii) \emph{techniques de protection} : chiffrement, zoning,
+masquage et protocoles zero-knowledge pour prouver sans révéler ; (iv)
+\emph{transparence procédurale} : audit des accès et droit d'information
+pour les personnes affectées. Ainsi la recherche de la vérité reste possible
+sans sacrifier la dignité humaine.
+
+En conclusion, la solution n'est ni l'absolue transparence ni le secret total,
+mais un équilibre institutionnalisé : une transparence encadrée, respectueuse
+des droits, qui fait de l'investigateur non un voyeur mais un gardien de la
+déontologie. Ce compromis incarne la lecture kantienne : protéger (la société)
+tout en respectant (l'individu) comme une fin en soi.
+  \section*{Exercice 2 — Transformation ontologique}
+    \subsection*{Comparaison Heidegger / ère numérique}
+Heidegger voit la technique comme un mode de révélation du monde (Gestell)
+qui transforme la relation humaine au réel. À l'ère numérique, cette idée
+se réitère : la technique ne se contente pas d'outiller l'homme ; elle
+constitue des modes d'être nouveaux, où l'existence inclut une présence
+numérique persistante (profils, historiques, logs). Heidegger insiste sur
+l'appauvrissement possible de l'expérience humaine par la réduction du
+monde à ressources ; en numérique, cet appauvrissement prend la forme
+d'un monde indexé et monétisé.
+
+\subsection*{Analyse d'un profil social comme \emph{être-par-la-trace}}
+Un profil social (publications, likes, métadonnées) est une manifestation
+intentionalisée de l'individu. Il révèle des choix, habitudes et relations.
+Interprété herméneutiquement, il devient un texte : les parties (posts) ne
+prennent sens qu'à travers le tout (parcours de vie numérique). L'\emph{être-par-la-trace}
+signifie que l'identité s'exprime et se légitime par ces traces, mais qu'elle
+n'est pas réductible à elles.
+
+\subsection*{Impact sur la preuve légale}
+Les preuves numériques sont immatérielles, volatiles et manipulables.
+La transformation ontologique introduit trois défis :
+\begin{itemize}
+  \item \textbf{Stabilité} : copies binaires et versions multiples ;
+  \item \textbf{Authenticité} : garantir origine et intégrité (hash, chain of custody) ;
+  \item \textbf{Interprétation} : nécessité d'une herméneutique technique pour éviter
+  des conclusions hâtives (contexte, corrélations vs causalité).
+\end{itemize} 
+  PARTIE 2: 
+   \section{Exercice 3} 
+   \paragraph{}Nous allons calculer l'entropie de chaque fichier 
+\begin{lstlisting}
+import math
+from collections import Counter
+def entropy(filepath):
+    with open(filepath, 'rb') as f:
+        data = f.read()
+    if not data:
+        return 0.0
+    counts = Counter(data)
+    n = len(data)
+    H = 0.0
+    for c in counts.values():
+        p = c / n
+        H -= p * math.log2(p)
+    return H  # bits par octet
+
+# Usage
+ print(entropy('6hearty.txt'))
+ print(entropy('OIP (2).jpeg'))
+ print(entropy('document.pdf.aes'))
+\end{lstlisting}
+Voici les résultats obtenus respectivement: 
+3.9362600275315254,7.96551329191923,5.9999426266173135
+D'après les attentes : on peut conclure que: 
+\begin{item}
+    \item -Le fichier texte est conforme car son entropie est proche de la borne haute 
+    \item -Le fichier image légèrement hors de la borne ne présente rien d'anormal car certains JPEG très compressés comme dans notre cas peuvent atteindre cette valeur 
+    \item -le résultat obtenu (très faible) suggère que peut contenir beaucoup d'en-tête non chifffrées par exemple.
+\end{item}
+Le seuil proposé H<7.7. Si ce n'est pas le cas on peut déduire qu'il s'agit d'un chiffrement suspect ou données chiffrées
+\end{document}
