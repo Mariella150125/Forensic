@@ -1,0 +1,259 @@
+\documentclass[memoire, 12pt]{report}
+\usepackage[top = 1.9cm, bottom = 1.5cm, left = 1.9cm, right = 2.1cm]{geometry}
+\usepackage{graphicx} 
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{multirow}
+\usepackage{multibib}
+\usepackage{multirow}
+\usepackage{tabularx}
+\newcites{biblio}{Bibliographie}
+\newcites{other}{Autres r\'ef\'erences}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[babel=true]{csquotes}
+\setlength{\fboxrule}{0.01cm}
+\setlength{\fboxsep}{0.5cm}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{url}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{glossaries}
+%\usepackage[thinlines]{easytable}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+\usepackage[bottom]{footmisc}
+%\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{glossaries}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage[utf8]{inputenc}   % encodage du fichier source
+\usepackage[T1]{fontenc}      % encodage des polices
+\usepackage[french]{babel}    % pour le français
+
+% Configuration des styles pour le code Python
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{python}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=python}
+
+
+
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+%\usepackage{fancyhdr}
+\usepackage[Conny]{fncychap}
+%Conny
+%Bjornstrup
+%\pagestyle{Conny}
+\usepackage[french]{babel}
+%\renewcommand{\footrulewidth}{3pt}
+\makeglossaries
+\title{TAF_N1_NGWAMBE MARIELLA}
+\author{}
+\date{MOIS_ICI 2025}
+
+\begin{document}
+\begin{titlepage}
+
+	\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+		\draw[orange!90!orange,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+		
+		\draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+		([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+		
+		
+		\draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+		([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+	\end{tikzpicture}
+	\begin{center}
+		\begin{tabular}{l*{40}{@{\hskip.05mm}c@{\hskip.8mm}} c c}
+			\begin{tabular}{c}
+				
+		\footnotesize{\textbf{R\'EPUBLIQUE DU CAMEROUN}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Paix - Travail - Patrie}} \\
+				
+			\scriptsize{\textbf{******************}}\\ 
+			\footnotesize{	\textbf{UNIVERSIT\'E DE YAOUND\'E I}}\\
+				
+			\scriptsize{	\textbf{****************}} \\
+				
+			\footnotesize{	\textbf{ECOLE NATIONALE SUPERIEURE}} \\
+			\footnotesize{	\textbf{POLYTECHNIQUE DE YAOUNDE}} \\
+				
+			\scriptsize{	\textbf{****************}} \\
+		   \scriptsize{	\textbf{D\'EPARTEMENT DE GENIE}}\\
+		   \scriptsize{	\textbf{INFORMATIQUE}}\\
+				
+			\scriptsize{	\textbf{****************}}\\
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\includegraphics[height=4cm, width=2.8cm]{enspy.png}
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\footnotesize{\textbf{ REPUBLIC OF CAMEROON}} \\
+				
+				\footnotesize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Peace - Work - Fatherland}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\footnotesize{\textbf{UNIVERSITY OF YAOUNDE I}}\\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+				\footnotesize{\textbf{NATIONAL ADVANCED SCHOOL}} \\
+				\footnotesize{\textbf{OF ENGINEERING OF YAOUNDE}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\scriptsize{\textbf{DEPARTMENT OF COMPUTER}}\\
+				\scriptsize{\textbf{ENGINEERING}}\\
+				
+				\footnotesize{\textbf{****************}}\\
+				
+			\end{tabular}	
+		\end{tabular}
+	
+		\vspace{0.5cm}
+		\begin{tabular}{l*{40}{@{\hskip 3.5cm}c@{\hskip5cm}} p{3.5cm} r}
+		\end{tabular}
+		
+		\noindent\rule{\textwidth}{0.7mm}
+		\Large{{\textbf{EXPOSES}}}\\
+		\Large{{\textbf{\textit{NOTE DE LECTURE}}}}
+		\noindent\rule{\textwidth}{0.7mm}
+	\end{center}
+		
+	\begin{center}
+	\begin{tabular}{c}
+		
+		\vspace{0.1cm}
+		\normalsize
+	
+	
+		\vspace{0.1cm}
+		\normalsize\textbf{Option }:\\			
+		\textsl{Cybersécurité et Investigation Numérique}
+		
+	\end{tabular}
+	\end{center}
+		
+	\begin{center}
+		\normalsize %\hspace{-2cm}
+		\begin{tabular}{c}
+			\vspace{0.07cm}
+			\hspace{0.02cm} \textbf{\textbf{Rédigé par :}}\\
+			\hspace{0.02cm} \textsl{\textbf{NGWAMBE  MARIELLA}, 22P040}\\\\
+			
+		\end{tabular}
+	\end{center}
+	
+	\begin{center}
+	\hspace{0.02cm} \textbf{Sous l'encadrement de:}\\
+	\hspace{0.02cm} \textsl{M. Thierry MINKA}
+	\end{center}
+	
+    
+	\vspace{2cm}
+	\begin{center}
+		\textbf{Année académique 2025 / 2026}
+	\end{center}
+		
+	\vspace{-1.4cm}
+	
+		
+	\vfill%\null
+	
+\end{titlepage}
+\tableofcontents
+\newpage
+\begin{document}
+
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+\paragraph{}L'ère numérique est un théâtre d'opérations perpétuel, où chaque clic, chaque transaction et chaque visage capturé génère des données qui sont à la fois des actifs stratégiques et des preuves potentielles. Face à cette prolifération incontrôlée, l'Investigation Numérique s'affirme non pas comme un simple outil technique, mais comme la méthodologie scientifique indispensable pour déchiffrer, sécuriser et légaliser ce chaos informationnel. Nos travaux explorent cette centralité à travers trois prismes cruciaux, démontrant que l'investigation est désormais la colonne vertébrale qui relie de nombreux concepts et réalités tels que l'expérimentation éthique sur les réseaux sociaux, la surveillance biométrique et l'établissement de la preuve cryptographique. Ces résumés détaillent comment la rigueur forensique est essentielle pour maîtriser les cas  les plus complexes grâce à une connnaissance maitrisée de chaque technologie ou principe.
+ \section*{1.Les deepfake audios}
+\addcontentsline{toc}{section}{1.Les deepfake audios}
+Le premier exposé s’intéresse au deepfake vocal et au cas pratique réalisé avec MINIMAX Audio. Il explique comment l’intelligence artificielle peut cloner la voix d’une personne à partir de quelques secondes d’enregistrement. Cette technologie, d’abord conçue pour des usages positifs tels que l’accessibilité pour les personnes ayant des troubles de la parole, le doublage de films ou les assistants vocaux, est aujourd’hui détournée à des fins malveillantes. Les deepfakes vocaux permettent de réaliser des fraudes bancaires, des usurpations d’identité ou encore de manipuler l’opinion publique. L’expérience pratique a consisté à utiliser MINIMAX Audio pour reproduire fidèlement la voix d’une personne et lui faire prononcer des phrases qu’elle n’a jamais dites. Le résultat obtenu est quasiment indiscernable à l’oreille humaine, mettant en évidence les risques importants que ces outils représentent. Les principaux dangers évoqués concernent la perte de fiabilité des preuves audio dans les enquêtes, les menaces sur la confidentialité et l’opposabilité juridique. L’exposé met en avant plusieurs pistes pour limiter ces risques : l’intégration d’outils de détection de deepfakes par les plateformes numériques, la sensibilisation des utilisateurs, le renforcement du cadre légal ainsi que le recours à l’authentification multifactorielle pour vérifier les sources des enregistrements. Cette partie souligne ainsi le paradoxe d’une technologie à la fois prometteuse et inquiétante pour la cybersécurité.
+ \section*{2.Réalisation de fausses conversations Whatsapp}
+\addcontentsline{toc}{section}{2.Réalisation de fausses conversations Whatsapp}
+Le second exposé se concentre sur la falsification de conversations WhatsApp. Il montre, à travers des outils tels que Chatsmock et Adobe Photoshop, combien il est simple et rapide de créer de fausses captures d’écran de discussions. A travers la simulation d' un échange entre un enseignant et une étudiante : messages inventés, photos de profil, icônes et horodatages ont été manipulés de manière crédible, rendant la conversation totalement fictive mais réaliste. Cette démonstration met en évidence un problème majeur : les captures d’écran, souvent utilisées comme preuves dans des affaires personnelles, professionnelles ou judiciaires, ne sont plus fiables. Elles peuvent être falsifiées sans compétences techniques poussées, ce qui complique le travail des enquêteurs numériques et fragilise la confiance dans les procédures légales. L’exposé insiste sur la nécessité de privilégier les données brutes extraites directement des téléphones ou des serveurs, d’utiliser des outils forensiques capables de détecter les altérations, et de former les juges et les experts afin de mieux identifier les faux éléments numériques.
+ \section*{3. Les 3 meilleurs logiciels de rédaction de mémoire}
+\addcontentsline{toc}{section}{3.Les 3 meilleurs logiciels de rédaction de mémoire}
+La réussite d'un mémoire exige un choix stratégique d'outils logiciels pour gérer la complexité académique et la rigueur des sources, s'inscrivant parfaitement dans une démarche d'investigation numérique. Le socle de cette efficacité repose sur un triptyque complémentaire : Overleaf pour la forme professionnelle, Microsoft Word pour l'accessibilité universelle, et Zotero pour la rigueur bibliographique indispensable. Overleaf, basé sur LaTeX, est l'outil d'excellence académique offrant une qualité typographique irréprochable et une collaboration en temps réel, idéal pour les travaux exigeants et scientifiques grâce à sa gestion avancée des références croisées. Word, bien que moins structurant de facto, reste le standard pour l'échange et l'édition facile, à condition de maîtriser rigoureusement ses styles hiérarchiques et son suivi des modifications. Cependant, la véritable clé de la rigueur est Zotero, le gestionnaire open-source qui centralise les sources, garantit l'exactitude des citations via la capture automatique intelligente et supporte des milliers de styles académiques. Les combinaisons gagnantes créent des workflows optimisés : Word + Zotero est la solution la plus accessible pour les débutants, minimisant la courbe d'apprentissage tout en assurant une gestion des références fiable, tandis qu'Overleaf + Zotero représente l'optimum pour la qualité professionnelle et la complexité technique, l'intégration se faisant parfaitement via l'export BibTeX. Quel que soit l'outil de rédaction, Zotero est le pivot qui assure la cohérence formelle et la fiabilité des sources. En conclusion, si la maîtrise technique de ces instruments est essentielle, elle doit toujours rester au service du fond : la profondeur de la recherche et la substance intellectuelle sont les critères ultimes de la réussite du mémoire.
+ \section* {4. Les 10 cas Africains les plus importants de hacking durant les 10 dernières années}
+ \addcontentsline{toc}{section}{4.Les 10 cas africains les plus importants de hacking durant les 10 dernières années}
+L'Afrique connaît une révolution numérique exponentielle, mais cet essor s'accompagne d'une hausse vertigineuse des cyberattaques, le continent enregistrant plus de 3 000 attaques par semaine et par organisation, soit une augmentation de 300 pourcents en dix ans. Face à cette menace systémique, l'investigation numérique devient un pilier essentiel pour documenter et prévenir les incidents, en s'articulant autour de cinq étapes fondamentales : l'identification, la collecte, la préservation de l'intégrité, l'analyse technique et la rédaction du rapport. La vulnérabilité africaine s'explique par une faible maturité institutionnelle (lois incomplètes), un manque de compétences locales (moins d'un expert pour 100 000 habitants) et des infrastructures obsolètes. Les principales menaces sont les ransomwares, les fraudes au mobile money, et l'espionnage numérique. Les dix cas africains emblématiques de la décennie (2015-2025), sélectionnés selon des critères de taille, d'organisation ciblée, de volume de données et d'impact financier, illustrent la gravité du paysage : du Ransomware sur Transnet (Afrique du Sud, 2021) paralysant les ports et causant 60 millions USD de pertes , à la Fuite massive de la CNSS (Maroc, 2025) exposant les données de 2 millions de salariés , en passant par l'attaque sur le fournisseur d'électricité Eneo au Cameroun (2024) et les fraudes massives au Mobile Money chez MTN Nigeria (2018). Ces cas soulignent que les attaques visent les infrastructures stratégiques (énergie, transport, santé) et exploitent les faiblesses humaines et techniques. Pour bâtir une cybersouveraineté africaine, les recommandations finales convergent vers le renforcement des capacités d'investigation et de forensic, la création de CERT/CSIRT régionaux pour l'échange d'informations en temps réel, l'harmonisation des lois autour de la Convention de Malabo, et la promotion de l'hébergement local des données. Le développement numérique durable du continent dépend désormais de cette responsabilité partagée entre institutions, entreprises et citoyens.
+ \section* {5. Utilité de l'investigation numérique dans la police judiciaire}
+ \addcontentsline{toc}{section}{5.Utilité de l'investigation numérique dans la police judiciare}
+L'investigation numérique (ou digital forensic) est passée du statut de compétence spécialisée à celui de pilier fondamental de la Police Judiciaire, particulièrement au Cameroun, confronté à une criminalité qui a massivement migré vers le numérique. Cette discipline stratégique, qui consiste à collecter, analyser, conserver et présenter des preuves numériques , a des apports essentiels en offrant un accès à une "scène de crime virtuelle" invisible, capable de retrouver des traces difficiles à effacer comme des conversations supprimées, des métadonnées, ou des fichiers récupérables. Elle est la seule capable de résoudre les infractions de cybercriminalité (piratage, ransomware, phishing) qui laissent très peu de traces matérielles. L'investigation permet l'identification et le traçage des auteurs par l'analyse d'adresses IP, de journaux système, de géolocalisation et de communications (SMS, WhatsApp) , et assure la reconstitution chronologique des événements avec une précision inédite (quand un fichier a été créé, modifié, transféré). Elle est indispensable dans des domaines d'application vastes, allant de la lutte contre la cybercriminalité (démantèlement de réseaux de fraude en ligne à Douala ) et la criminalité transfrontalière/terrorisme (cartographie des réseaux de Boko Haram et de trafics de stupéfiants ) à la criminalité financière (détournements de fonds publics ) et aux crimes violents (reconstitution des déplacements lors de kidnappings ). La synergie avec des organisations comme Interpol est cruciale pour traquer les réseaux transnationaux. La pratique s'appuie sur des outils comme Autopsy, FTK Imager, Cellebrite pour la récupération et l'analyse de données, et Wireshark pour le réseau, nécessitant des techniques de lutte contre le chiffrement. Cependant, cet atout majeur se heurte à des défis et limites substantielles au Cameroun : l'explosion du volume et de la complexité des données (un smartphone peut contenir 128GB+ ), les difficultés juridiques autour de l'admissibilité des preuves fragiles et le strict respect des droits fondamentaux (vie privée vs sécurité) exigeant des mandats , la dépendance à l'expertise technique due à une pénurie d'experts certifiés (moins de 50 au Cameroun ), et les contraintes matérielles/financières dues au coût exorbitant des équipements (une station forensic complète est d'environ 25 millions FCFA ). Malgré ces obstacles, l'investigation numérique est une nécessité pour la sécurité nationale. L'avenir impose d'investir impérativement dans la formation continue des enquêteurs, le renforcement des moyens logistiques et l'adaptation permanente du cadre juridique, tout en se préparant aux nouvelles frontières criminelles que sont l'intelligence artificielle, le métavers et les deepfakes.
+ \section* {6. Conception et analyse d'un faux profil Tiktok}
+\addcontentsline{toc}{section}{6.Conception et analyse d'un faux profil tiktok}
+Cet exposé s'est concentrée sur l'étude des enjeux liés à l'identité numérique et à la viralité des contenus à travers la création d'un faux profil sur TikTok. La démarche méthodologique a privilégié l'anonymat, en utilisant une adresse de messagerie temporaire (temp mail) pour éviter tout lien avec les données personnelles des investigateurs. La niche choisie est la cybersécurité, une thématique à la fois technique, sensible et d'actualité, justifiée par la volonté d'apporter une valeur ajoutée positive par la sensibilisation et l'éducation des internautes. La stratégie de contenu a reposé sur une approche éducative et engageante, utilisant un ton léger et humoristique pour aborder des sujets cruciaux comme la sécurité des mots de passe et les arnaques en ligne. Des outils comme Canva pour les visuels et ChatGPT pour les messages ont été mobilisés pour la création de contenu. L'objectif principal, atteint, était d'analyser les interactions et de démontrer la capacité des réseaux sociaux à diffuser efficacement des messages de prévention , tout en soulignant l'impératif de mener une telle expérience dans un cadre éthique strict et strictement fictif, sans manipulation ni atteinte à autrui. L'expérience a confirmé la nécessité pour tout acteur du numérique de conjuguer la maîtrise des outils digitaux avec une conscience critique des impacts possibles.
+ \section*{7. Points sur les algorithmes de reconnaissance faciale}
+ \addcontentsline{toc}{section}{7.Points sur les algorithmes de reconnaissance faciale}
+La reconnaissance faciale (RF) est présentée comme une technologie biométrique stratégique pour les enquêtes judiciaires et la cybersécurité, capable d'identifier ou de vérifier l'identité d'une personne à partir de ses traits du visage. Décrite comme une modalité non intrusive et facile à acquérir , la RF fonctionne selon un processus en trois phases : l'enrôlement (capture et stockage du modèle biométrique), l'identification (recherche 1-N sans identité affirmée) et la vérification (authentification 1-1). Les algorithmes utilisés sont variés, allant des méthodes classiques (globales comme l'Analyse en Composantes Principales - PCA) aux méthodes locales (traits géométriques des yeux, nez, bouche) et modernes (Deep Learning). L'avantage principal en investigation est sa capacité à traiter rapidement de grands volumes d'images et de vidéos collectés dans des contextes sensibles (surveillance publique, preuves numériques). Cependant, l'exposé insiste sur les enjeux éthiques et juridiques cruciaux soulevés par l'usage massif de la RF, notamment la protection des données personnelles et le respect de la vie privée. L'analyse conclut qu'en investigation, la technologie doit être utilisée de manière responsable et proportionnée, en intégrant une réflexion sur son efficacité face aux tentatives de dissimulation et en respectant strictement les cadres légaux et éthiques en vigueur
+ \section*{8. Présentation du protocole ZK-NR}
+ \addcontentsline{toc}{section}{8.Présentation du protocole ZK-NR}
+Ce thème se positionne à l'intersection de la cryptographie avancée et du droit, s'attaquant au problème fondamental de l'opposabilité légale de la cryptographie dans les transactions numériques. Le concept central est la non-répudiation numérique, qui garantit qu'un expéditeur ne peut nier l'origine d'un message et qu'une preuve possède une valeur irréfutable devant un tribunal. La non-répudiation est essentielle pour la sécurité des transactions électroniques et la conformité réglementaire (RGPD, auditabilité). Les outils classiques incluent la Signature Numérique (mécanisme cryptographique asymétrique basé sur le hachage SHA-256 et les clés RSA pour prouver l'intégrité et l'authenticité) , le Certificat Électronique (identité numérique fiable) et l'Horodatage Numérique (preuve d'antériorité conforme à la RFC 3161). Pour répondre aux défis modernes et à la menace quantique, l'exposé présente le Protocole ZK-NR (Zero-Knowledge Non-Repudiation), une architecture cryptographique modulaire en couches combinant des primitives post-quantiques (STARKS, Dilithium). L'innovation de ZK-NR est de générer des preuves sécurisées, vérifiables et auditables, tout en préservant la confidentialité (Zero-Knowledge), comblant ainsi le fossé entre la sécurité cryptographique et les exigences institutionnelles/juridiques. Ce protocole adresse le Trilemme CRO (Confidentialité, Fiabilité et Opposabilité), définissant une nouvelle norme pour la preuve numérique légale dans l'investigation moderne.
+\section*{9.Réalisation d'une vidéo deepfake sur le premier chapitre du cours d'investigation numérique}
+ \addcontentsline{toc}{section}{9.Réalisation d'une vidéo deepfake sur le premier chapitre du cours d'investigation numérique}
+\paragraph{}
+Ce thème présente un projet pédagogique illustrant l’usage des deepfakes à travers l’intelligence artificielle. Il explique d’abord que les deepfakes, issus du Deep Learning et popularisés grâce aux GAN (réseaux antagonistes génératifs), permettent de créer des contenus audio ou vidéo falsifiés mais très réalistes. S’ils offrent des perspectives dans l’éducation, la communication ou le divertissement, ils soulèvent aussi des inquiétudes éthiques, notamment quant au respect de la vie privée et aux risques de manipulation sur les réseaux sociaux. L’exposé aborde ensuite les outils utilisés : HeyGen AI, une plateforme de génération vidéo capable de créer des avatars réalistes, de cloner des voix et de produire des contenus multilingues en quelques clics ; et GPT-5, un modèle avancé de traitement du langage naturel utilisé pour rédiger le script du cours. Le groupe a  conçu une vidéo où le chef d’équipe dispense le premier chapitre du module sur les fondements philosophiques de l'investigation numérique, démontrant la complémentarité entre le texte généré par GPT-5 et les visuels animés de HeyGen. En conclusion, le projet montre le potentiel des IA génératives pour enrichir la pédagogie et la communication, tout en soulignant la nécessité d’un usage responsable, encadré par des considérations techniques, légales et éthiques.
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+\paragraph{}
+L'Investigation Numérique est l'instrument de la souveraineté : elle dicte la marche à suivre f{ace à l'explosion des menaces, garantit la justice et encadre l'innovation. Elle n'est plus un simple outil technique, mais la force structurante qui impose la rigueur scientifique, l'éthique et la conformité légale à chaque aspect du monde digitalisé. Des failles de sécurité d'un port africain à la signature d'un contrat par cryptographie post-quantique, c'est l'impératif forensique qui valide la légitimité des actions et assure que la confiance numérique repose sur une vérité irréfutable, permettant un développement durable et sécurisé du continent.
+\end{document}
+
