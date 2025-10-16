@@ -1,0 +1,477 @@
+\documentclass[memoire, 12pt]{report}
+\usepackage[top = 1.9cm, bottom = 1.5cm, left = 1.9cm, right = 2.1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{multibib}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[babel=true]{csquotes}
+\setlength{\fboxrule}{0.01cm}
+\setlength{\fboxsep}{0.5cm}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{url}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{glossaries}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+\usepackage[bottom]{footmisc}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+
+\usepackage{longtable}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[Conny]{fncychap}
+\makeglossaries
+
+% Configuration des styles pour le code Python
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{python}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+\lstset{style=python}
+
+\newcites{biblio}{Bibliographie}
+\newcites{other}{Autres r\'ef\'erences}
+
+
+\begin{document}
+\begin{titlepage}
+
+    \begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+        \draw[blue!90!orange,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+        
+        \draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+        ([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+        
+        
+        \draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+        ([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+    \end{tikzpicture}
+    \begin{center}
+        \begin{tabular}{l*{40}{@{\hskip.05mm}c@{\hskip.8mm}} c c}
+            \begin{tabular}{c}
+                
+        \footnotesize{\textbf{R\'EPUBLIQUE DU CAMEROUN}} \\
+                
+                \scriptsize{\textbf{****************}} \\
+                
+                    \scriptsize{\textbf{Paix - Travail - Patrie}} \\
+                
+            \scriptsize{\textbf{******************}}\\
+            \footnotesize{    \textbf{UNIVERSIT\'E DE YAOUND\'E I}}\\
+                
+            \scriptsize{    \textbf{****************}} \\
+                
+            \footnotesize{    \textbf{ECOLE NATIONALE SUPERIEURE}} \\
+            \footnotesize{    \textbf{POLYTECHNIQUE DE YAOUNDE}} \\
+                
+            \scriptsize{    \textbf{****************}} \\
+         \scriptsize{    \textbf{D\'EPARTEMENT DE GENIE}}\\
+         \scriptsize{    \textbf{INFORMATIQUE}}\\
+                
+            \scriptsize{    \textbf{****************}}\\
+                
+            \end{tabular} &
+            \begin{tabular}{c}
+                
+                \includegraphics[height=4cm, width=2.8cm]{PO Y.jpg}
+                
+            \end{tabular} &
+            \begin{tabular}{c}
+                
+                \footnotesize{\textbf{ REPUBLIC OF CAMEROON}} \\
+                
+                \footnotesize{\textbf{****************}} \\
+                
+                    \scriptsize{\textbf{Peace - Work - Fatherland}} \\
+                
+                \scriptsize{\textbf{****************}} \\
+                \footnotesize{\textbf{UNIVERSITY OF YAOUNDE I}}\\
+                
+                \scriptsize{\textbf{****************}} \\
+                
+                \footnotesize{\textbf{NATIONAL ADVANCED SCHOOL}} \\
+                \footnotesize{\textbf{OF ENGINEERING OF YAOUNDE}} \\
+                
+                \scriptsize{\textbf{****************}} \\
+                \scriptsize{\textbf{DEPARTMENT OF COMPUTER}}\\
+                \scriptsize{\textbf{ENGINEERING}}\\
+                
+                \footnotesize{\textbf{****************}}\\
+                
+            \end{tabular}    
+        \end{tabular}
+    
+        \vspace{0.5cm}
+        \begin{tabular}{l*{40}{@{\hskip 3.5cm}c@{\hskip5cm}} p{3.5cm} r}
+        \end{tabular}
+        
+        \noindent\rule{\textwidth}{0.7mm}
+        \Large{{\textbf{CHAPITRE 2}}}\\
+        \Large{{\textbf{\textit{EXERCICES}}}}
+        \noindent\rule{\textwidth}{0.5mm}
+    \end{center}
+        
+    \begin{center}
+    \begin{tabular}{c}
+        
+        \vspace{0.1cm}
+        \normalsize
+    
+    
+        \vspace{0.1cm}
+        \normalsize\textbf{Option }:\\            
+        \textsl{Cybersécurité et Investigation Numérique}
+        
+    \end{tabular}
+    \end{center}
+        
+    \begin{center}
+        \normalsize %\hspace{-2cm}
+        \begin{tabular}{c}
+            \vspace{0.07cm}
+            \hspace{0.02cm} \textbf{\textbf{Rédigé par :}}\\
+            \hspace{0.02cm} \textsl{\textbf{NGWAMBE MARIELLA}, 22P040}\\\\
+            
+        \end{tabular}
+    \end{center}
+    
+    \begin{center}
+    \hspace{0.02cm} \textbf{Sous l'encadrement de:}\\
+    \hspace{0.02cm} \textsl{M. Thierry MINKA}
+    \end{center}
+    
+     
+    \vspace{2cm}
+    \begin{center}
+        \textbf{Année académique 2025 / 2026}
+    \end{center}
+        
+    \vspace{-1.4cm}
+    
+        
+    \vfill%\null
+    
+\end{titlepage}
+\tableofcontents
+\newpage
+
+\section*{Partie 1: Analyse Historique et Épistémologique}
+\addcontentsline{toc}{section}{Partie 1: Analyse Historique et Épistémologique}
+\subsection*{1. Analyse Comparative des Régimes de Vérité (1990-2000 vs 2010-2020)}
+\addcontentsline{toc}{subsection}{1. Analyse Comparative des Régimes de Vérité (1990-2000 vs 2010-2020)}
+\begin{longtable}{|p{0.1\linewidth}|p{0.35\linewidth}|p{0.35\linewidth}|p{0.15\linewidth}|}
+\caption{Analyse Comparative des Régimes de Vérité (1990-2000 vs 2010-2020)} \\
+\hline
+\textbf{Axe} & \textbf{1990-2000 (Ère de la Professionnalisation)} & \textbf{2010-2020 (Ère du Big Data et du Cloud)} & \textbf{Rupture/Discontinuité Épistémologique} \\
+\hline
+\endfirsthead
+\multicolumn{4}{c}{\tablename\ \thetable\ (suite)} \\
+\hline
+\textbf{Axe} & \textbf{1990-2000 (Ère de la Professionnalisation)} & \textbf{2010-2020 (Ère du Big Data et du Cloud)} & \textbf{Rupture/Discontinuité Épistémologique} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+Technique (T) & Systèmes isolés $(\mathbf{T} \approx 0.3)$ (Émergence du web) & Écosystèmes connectés $(\mathbf{T} \approx 0.9)$ (Émergence du Cloud computing) & Le passage du \textbf{disque dur} à l'\textbf{écosystème cloud} et aux données massives. \\
+\hline
+Juridique (J) & Cadres nationaux $(\mathbf{J} \approx 0.4)$ (Création de l'IOCE) & Gouvernance globale $(\mathbf{J} \approx 0.7)$ (Affaire Snowden, enjeux transfrontaliers) & La preuve passe d'un objet local et traçable à un \textbf{flux transfrontalier}. \\
+\hline
+Social (S) & Professionnalisation comme institutionnalisation (Acteurs-Réseaux : Humain $\to$ PC $\to$ Internet $\to$ Preuve) & Échelle critique (Big Data) (Acteurs-Réseaux : Humain $\to$ Cloud $\to$ IA $\to$ Vérité algorithmique) & L'acceptabilité sociale de \textbf{l'analyse algorithmique} remplace l'expertise humaine comme autorité. \\
+\hline
+Pratique (P) & Standardisation et reproductibilité (Chaîne de Custody) & Changement d'échelle qualitatif (Analyse algorithmique) & Le passage de la \textbf{vérification humaine} à la \textbf{vérité computationnelle} (Algorithme comme autorité épistémique). \\
+\hline
+\end{longtable}
+
+---
+\subsection*{2. Étude de Cas Archéologique Foucaldienne : Affaire Enron (2001)}
+\addcontentsline{toc}{subsection}{2. Étude de Cas Archéologique Foucaldienne : Affaire Enron (2001)}
+Le tableau analyse l'Affaire Enron sous l'angle de la production de vérité numérique.
+
+\begin{longtable}{|p{0.45\linewidth}|p{0.45\linewidth}|}
+\caption{Analyse Foucaldienne de l'Affaire Enron (2001)} \\
+\hline
+\textbf{Étape Méthodologique} & \textbf{Application à l'Affaire Enron (2001)} \\
+\hline
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ (suite)} \\
+\hline
+\textbf{Étape Méthodologique} & \textbf{Application à l'Affaire Enron (2001)} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+(a) Délimitation du Corpus & Corpus massif de 500 000 documents électroniques (emails, bases de données). Le volume inédit crée un nouveau besoin. \\
+\hline
+(b) Analyse des Formations Discursives & \textbf{Énoncés Possibles :} L'analyse automatisée de documents est fiable. La vérité réside dans la masse des données de l'entreprise. \\
+\hline
+(c) Identification des Conditions de Possibilité & \textbf{Régime de Vérité Standardisé.} \textbf{Cadre épistémique :} Croyance en la neutralité des outils (début des outils commerciaux). La validité repose sur la conformité (ISO, NIST). \\
+\hline
+(d) Comparaison Diachronique (vs Panama Papers 2016) & Enron (500k documents) a mené à l'analyse automatisée locale. Panama Papers (11.5M documents) a mené à l'investigation transnationale et à l'\textbf{analyse graphique}. \\
+\hline
+\end{longtable}
+
+---
+\section*{Partie 2: Modélisation Mathématique et Prospective}
+\addcontentsline{toc}{section}{Partie 2: Modélisation Mathématique et Prospective}
+\subsection*{4. Vérification de l'Accélération Technologique}
+\addcontentsline{toc}{subsection}{4. Vérification de l'Accélération Technologique}
+Ce tableau sert à l'estimation du facteur d'accélération $k$ (Loi $\Delta t_{n+1}=k\cdot\Delta t_{n}$).
+
+\begin{table}[H]
+\caption{Durées des Régimes de Vérité et Calcul de k}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Transition} & \textbf{Période} & \textbf{$\Delta t_n$ (Durée en années)} & \textbf{Rapport $k_n = \Delta t_{n}/\Delta t_{n-1}$} \\
+\hline
+$n=1$ & 1970-1990 (Artisanal $\to$ Professionnel) & $20$ & \textbf{N/A} \\
+\hline
+$n=2$ & 1990-2000 (Professionnel $\to$ Standardisé) & $10$ & $10/20 = 0.5$ \\
+\hline
+$n=3$ & 2000-2010 (Standardisé $\to$ Big Data) & $10$ & $10/10 = 1.0$ \\
+\hline
+$n=4$ & 2010-2020 (Big Data $\to$ Quantique) & $10$ & $10/10 = 1.0$ \\
+\hline
+\multicolumn{3}{|r|}{\textbf{Estimation $k_{\text{moyen}}$ (Facteur d'accélération)}} & $\mathbf{0.833}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{1em}
+Vérification empirique de la \textbf{Loi d'Accélération Technologique} : $\Delta t_{n+1}=k\cdot\Delta t_{n}$ avec $0<k<1$.
+
+\textbf{Collecte des Durées des Régimes ($\Delta t_n$) :}
+\begin{itemize}
+    \item $\Delta t_1$ (1970-1990) : $20$ ans
+    \item $\Delta t_2$ (1990-2000) : $10$ ans
+    \item $\Delta t_3$ (2000-2010) : $10$ ans
+    \item $\Delta t_4$ (2010-2020) : $10$ ans
+\end{itemize}
+
+\textbf{Estimation de la constante $k$ :} $k$ est le facteur de décroissance du temps entre les changements de régime. Nous estimons $k$ par la moyenne des rapports successifs $\frac{\Delta t_{n+1}}{\Delta t_n}$ :
+$$
+k \approx \frac{1}{n-1} \sum_{i=1}^{n-1} \frac{\Delta t_{i+1}}{\Delta t_i}
+$$
+\begin{itemize}
+    \item $k_1 = \frac{\Delta t_2}{\Delta t_1} = \frac{10}{20} = 0.5$
+    \item $k_2 = \frac{\Delta t_3}{\Delta t_2} = \frac{10}{10} = 1.0$
+    \item $k_3 = \frac{\Delta t_4}{\Delta t_3} = \frac{10}{10} = 1.0$
+\end{itemize}
+\textbf{Estimation $k$} : $k_{\text{moyen}} = \frac{0.5 + 1.0 + 1.0}{3} \approx 0.833$.
+Comme $k < 1$, la loi d'accélération est \textbf{partiellement vérifiée} sur la première transition ($k_1=0.5$), mais la stabilisation à $k=1$ (pas d'accélération) est observée pour les transitions suivantes.
+
+\textbf{Prédiction du timing du prochain changement de régime :}
+La durée du prochain régime $\Delta t_5$ est prédite par $\Delta t_5 = k_{\text{moyen}} \cdot \Delta t_4$.
+$$\Delta t_5 = 0.833 \cdot 10 \approx 8.33 \text{ ans}$$
+\textbf{Prédiction} : Le prochain changement de régime (Post-Quantique $\to$ Scénario 2030-2050) est prédit pour l'année $2020 + 8.33 \approx \textbf{2028.33}$.
+
+---
+\subsection*{5. Analyse du Trilemme CRO Historique}
+\addcontentsline{toc}{subsection}{5. Analyse du Trilemme CRO Historique}
+Analyse du compromis entre Confidentialité ($\mathcal{C}$), Fiabilité ($\mathcal{R}$), et Opposabilité ($\mathcal{O}$) pour chaque régime.
+
+\begin{longtable}{|c|c|c|c|c|}
+\caption{Estimation Historique des Scores CRO (Trilemme)} \\
+\hline
+\textbf{Période} & \textbf{Confidentialité ($\mathcal{C}$)} & \textbf{Fiabilité ($\mathcal{R}$)} & \textbf{Opposabilité ($\mathcal{O}$)} & \textbf{Compromis Dominant} \\
+\hline
+\endfirsthead
+\multicolumn{5}{c}{\tablename\ \thetable\ (suite)} \\
+\hline
+\textbf{Période} & \textbf{Confidentialité ($\mathcal{C}$)} & \textbf{Fiabilité ($\mathcal{R}$)} & \textbf{Opposabilité ($\mathcal{O}$)} & \textbf{Compromis Dominant} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+1970-1990 (Technique) & Élevée (systèmes isolés) & Moyenne (méthodes ad hoc) & Faible (absence de cadre J) & $\mathcal{C}$ vs $\mathcal{O}$ \\
+\hline
+1990-2000 (Juridique) & Moyenne (Internet naissant) & Élevée (Chaîne de Custody) & Élevée (reconnaissance juridique) & $\mathcal{C}$ vs $\mathcal{R}/\mathcal{O}$ \\
+\hline
+2010-2020 (Computationnel) & Faible (Cloud, Big Data) & Moyenne (Boîte Noire IA) & Élevée (Analyse Big Data admise) & $\mathcal{C}$ vs $\mathcal{O}$ et $\mathcal{R}$ vs $\mathcal{O}$ \\
+\hline
+2020-... (Quantique) & Élevée (Cryptographie post-quantique) & Faible (Incertitude quantique) & Faible (Preuve ZK) & $\mathcal{O}$ vs $\mathcal{C}/\mathcal{R}$ \\
+\hline
+\multicolumn{5}{|p{0.9\linewidth}|}{\textbf{Projection Future (Régime Quantique) :} Le régime Quantique vise à maximiser la Confidentialité ($\mathcal{C}$) via la cryptographie post-quantique et la \textbf{Preuve à divulgation nulle de connaissance (ZK Proof)}. Ce faisant, il creuse le fossé de l'Opposabilité ($\mathcal{O}$), car la vérification externe des preuves sans divulgation de l'information confidentielle est paradoxale. Le compromis dominant sera $\mathcal{O}$ contre $\mathcal{C}$.} \\
+\end{longtable}
+
+---
+\section*{Partie 3: Investigation Historique Appliquée}
+\addcontentsline{toc}{section}{Partie 3: Investigation Historique Appliquée}
+\subsection*{6. Reconstruction Archéologique d'Investigation : Cas Kevin Mitnick (1995)}
+\addcontentsline{toc}{subsection}{6. Reconstruction Archéologique d'Investigation : Cas Kevin Mitnick (1995)}
+L'affaire Mitnick a institué la \textbf{chaîne de custody} et l'expertise technique comme autorité.
+
+\begin{longtable}{|p{0.45\linewidth}|p{0.45\linewidth}|}
+\caption{Comparaison Archéologique : Affaire Mitnick (1995) vs 2025} \\
+\hline
+\textbf{Reconstruction Archéologique (1995)} & \textbf{Analyse avec Concepts Modernes (2025)} \\
+\hline
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ (suite)} \\
+\hline
+\textbf{Reconstruction Archéologique (1995)} & \textbf{Analyse avec Concepts Modernes (2025)} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+\textbf{Outils/Méthodes} : & \textbf{Outils/Concepts Modernes} : \\
+\hline
+\begin{itemize}
+    \item \textbf{Techniques} : Analyse de métadonnées systématique, Corrélation temporelle avancée, Traçage IP sophistiqué, développement de \textbf{Honeypot} par Tsutomu Shimomura.
+    \item \textbf{Régime de Vérité} : Juridique. La vérité dépend de la \textbf{reproductibilité de la méthode} et de l'intégrité de la \textbf{Chaîne de Custody} (Équation 5).
+    \item \textbf{Construction de la Vérité} : Reposait sur la patience et l'ingéniosité de l'expert technique pour lier des traces discrètes (telles que des logs système) en une preuve narrative cohérente.
+\end{itemize} &
+\begin{itemize}
+    \item \textbf{Techniques} : Outils d'analyse Cloud forensique, \textbf{Analyse graphique} pour corréler les identities pseudonymes, \textbf{IA d'attribution} (vs Traçage IP sophistiqué).
+    \item \textbf{Régime de Vérité} : Quantique/Algorithmique. La vérité serait produite par l'IA ou un Protocole ZK. Le trilemme CRO serait en jeu.
+    \item \textbf{Construction de la Vérité} : L'analyse des métadonnées serait automatisée et corrélée à un niveau de complexité impossible en 1995. Le défi épistémique serait le \textbf{problème de la boîte noire} de l'IA.
+\end{itemize} \\
+\hline
+\multicolumn{2}{|p{0.9\linewidth}|}{\textbf{Évaluation de l'impact des limitations technologiques} : En 1995, les limitations technologiques ont obligé les enquêteurs à \textbf{institutionnaliser la preuve} (Chaîne de Custody) et l'autorité de l'expert. L'effort se portait sur la \textbf{méthodologie} (P) et le \textbf{cadre juridique} (J). Aujourd'hui, l'excès de technologie reporte l'effort sur la \textbf{transparence algorithmique} et l'\textbf{éthique} (Questions fondamentales).} \\
+\hline
+\end{longtable}
+
+---
+\subsection*{7. Projet de Recherche Archéologique : Le Log du Télétravail (1990-2005)}
+\addcontentsline{toc}{subsection}{7. Projet de Recherche Archéologique : Le Log du Télétravail (1990-2005)}
+\paragraph{}Le trou représente ici un domaine épistémique ignoré dont l'analyse pouvait révéler une rupture ou une continuité cachée dans les régimes de vérité.
+\vspace{1em}
+(\textquotedblleft trou\textquotedblright) dans l'historiographie de la preuve numérique et d'y appliquer l'archéologie foucaldienne.
+
+\subsubsection*{A. Identification du Trou Archéologique}
+Le trou se situe dans la période de transition entre l'investigation système isolé et l'investigation réseau : l'émergence des premiers outils de \textbf{télétravail asynchrone} et de la \textbf{bureautique en réseau local (LAN)} de 1990 à 2005. L'historiographie se concentre sur le *hacking* (Mitnick) ou l'entreprise (Enron), mais ignore le log de l'employé moyen.
+
+\subsubsection*{B. Hypothèse Historique Testable}
+\textbf{Hypothèse (H) :} Le \textbf{Régime de Vérité Juridique} (1990-2000) a été silencieusement miné par la montée des \textbf{logs de productivité} et des \textbf{métadonnées asynchrones} (e.g., historiques de fichiers partagés, logs d'accès VPN). Ces traces, perçues comme de simples outils de gestion, sont devenues des \textbf{quasi-preuves} (au sens de Latour) qui ont préfiguré le \textbf{Régime de Vérité Algorithmique}.
+
+\subsubsection*{C. Application de la Méthode Archéologique}
+
+\begin{longtable}{|p{0.3\linewidth}|p{0.6\linewidth}|}
+\caption{Grille d'Analyse Archéologique - Le Log du Télétravail} \\
+\hline
+\textbf{Axe Foucauldien} & \textbf{Analyse des Sources (Logs LAN, RFC 1918, docs bureautiques)} \\
+\hline
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ (suite)} \\
+\hline
+\textbf{Axe Foucauldien} & \textbf{Analyse des Sources (Logs LAN, RFC 1918, docs bureautiques)} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+
+\textbf{Énoncés Possibles} & Le temps de connexion est un substitut légitime au temps de travail physique. La preuve peut être construite sans connexion Internet externe. \\
+\hline
+\textbf{Les Objets de Savoir} & Le \textbf{fichier cache} (cache DNS, cache navigateur) et le \textbf{log de synchronisation} (du serveur local) sont élevés au rang de traces vérifiables. \\
+\hline
+\textbf{La Volonté de Savoir} & La volonté des entreprises de \textbf{contrôler la productivité à distance} a créé les conditions techniques (les traces) et discursives (leur légitimité) pour la \textbf{surveillance numérique} moderne. \\
+\hline
+\textbf{Conditions de Possibilité} & La diffusion des \textbf{réseaux locaux (LAN)} et l'absence de législation spécifique au télétravail ont permis l'émergence du \textbf{log de présence} comme nouvelle catégorie de vérité. \\
+\hline
+\end{longtable}
+
+\hrule
+\subsection*{8. Analyse Prospective des Régimes Futurs (2030-2050)}
+\addcontentsline{toc}{subsection}{8. Analyse Prospective des Régimes Futurs (2030-2050)}
+\subsubsection*{A. Scénario Crédible : L'Ère de l'Incertitude Quantique et Neuro-Numérique}
+Le scénario est centré sur l'interconnexion cerveau-machine et le défi posé par les architectures quantiques et les preuves ZK (\textit{Zero-Knowledge Proofs}).
+
+\begin{itemize}
+    \item \textbf{Hypothèse Technique :} Généralisation des \textbf{interfaces neuronales non-invasives (BCI)}, rendant le processus de pensée lui-même une source potentielle de données. Déploiement à grande échelle de systèmes utilisant la \textbf{cryptographie post-quantique} et les protocoles de \textbf{Preuve ZK}.
+\end{itemize}
+
+\subsubsection*{B. Définition du Régime de Vérité : Le Régime ZK (Zero-Knowledge) ou Post-Vérité Algorithmique}
+\begin{itemize}
+    \item \textbf{Définition} : Un régime où la \textbf{vérification de la validité d'une assertion} (la preuve) est structurellement dissociée de la \textbf{divulgation de l'information sous-jacente}. L'Opposabilité est en crise.
+    \item \textbf{Autorité Épistémique} : L'\textbf{Algorithme de Preuve} (le vérificateur ZK) plutôt que le contenu de la trace ou l'expert humain.
+\end{itemize}
+
+\subsubsection*{C. Conditions de Possibilité et Défis}
+
+\begin{longtable}{|p{0.3\linewidth}|p{0.6\linewidth}|}
+\caption{Conditions et Défis du Régime ZK (2030-2050)} \\
+\hline
+\textbf{Axe T-J-S-P} & \textbf{Implications (Conditions de Possibilité)} \\
+\hline
+\endfirsthead
+\multicolumn{2}{c}{\tablename\ \thetable\ (suite)} \\
+\hline
+\textbf{Axe T-J-S-P} & \textbf{Implications (Conditions de Possibilité)} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+
+\textbf{Technique} ($\mathbf{T}$) & La \textbf{scalabilité des preuves ZK} et la diffusion des \textbf{interfaces BCI} dans le grand public. La preuve est un \textbf{certificat mathématique} et non plus une trace binaire. \\
+\hline
+\textbf{Juridique} ($\mathbf{J}$) & Nécessité de créer un \textbf{cadre d'Opposabilité ZK} : Comment contredire une preuve mathématiquement vérifiée mais insondable pour le jury ?\\
+\hline
+\textbf{Défis Éthiques et Épistémologiques} & \textbf{Défi ZK} : Le droit à l'oubli et à la non-surveillance devient techniquement absolu, bloquant l'investigation. \textbf{Défi BCI} : L'investigation neuro-numérique soulève la question de l'inviolabilité de la pensée (l'ultime domaine de la \textit{Confidentialité}). \\
+\hline
+\end{longtable}
+
+\subsubsection*{D. Méthodologie d'Investigation Adaptée}
+L'investigation devra passer de l'analyse de la *trace* à l'analyse de l'\textit{architecture de la preuve} et de la *gouvernance de l'information neuronale*.
+
+\begin{itemize}
+    \item \textbf{Forensique ZK} : Se concentrer sur les \textbf{faiblesses du protocole de preuve} (le *Proof Builder*) plutôt que sur les données elles-mêmes. L'investigateur doit être un \textbf{mathématicien-cryptographe}.
+    \item \textbf{Archéologie du Consentement Neuronal} : Développer des outils pour tracer les \textbf{points d'extraction et de chiffrement des données BCI}. La preuve se déplace vers le \textbf{consentement} à la création de la trace neuronale.
+    \item \textbf{Le Nouvel Trilemme} : Le trilemme CRO (Confidentialité, Fiabilité, Opposabilité) se déplace vers \textbf{Intégrité Protocolaire}, \textbf{Vérifiabilité Externe} et \textbf{Droit à la Non-Divulgation}.
+\end{itemize}
+\end{document}
