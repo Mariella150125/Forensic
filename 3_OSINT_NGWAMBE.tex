@@ -1,0 +1,401 @@
+\documentclass[memoire,12pt]{report}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{longtable}
+
+\thispagestyle{empty}
+
+% --- Cadre principal ---
+\begin{tikzpicture}[remember picture, overlay]
+    % Bordure extérieure
+    \draw[line width=1pt, rounded corners=10pt]
+        ($(current page.north west) + (1cm,-1cm)$)
+        rectangle
+        ($(current page.south east) + (-1cm,1cm)$);
+
+    % Bordure intérieure
+    \draw[line width=0.4pt, rounded corners=8pt]
+        ($(current page.north west) + (1.3cm,-1.3cm)$)
+        rectangle
+        ($(current page.south east) + (-1.3cm,1.3cm)$);
+\end{tikzpicture}
+
+\vspace*{2cm}
+
+\begin{center}
+		\begin{tabular}{l*{40}{@{\hskip.05mm}c@{\hskip.8mm}} c c}
+			\begin{tabular}{c}
+				
+		\footnotesize{\textbf{R\'EPUBLIQUE DU CAMEROUN}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Paix - Travail - Patrie}} \\
+				
+			\scriptsize{\textbf{******************}}\\ 
+			\footnotesize{	\textbf{UNIVERSIT\'E DE YAOUND\'E I}}\\
+				
+			\scriptsize{	\textbf{****************}} \\
+				
+			\footnotesize{	\textbf{ECOLE NATIONALE SUPERIEURE}} \\
+			\footnotesize{	\textbf{POLYTECHNIQUE DE YAOUNDE}} \\
+				
+			\scriptsize{	\textbf{****************}} \\
+		   \scriptsize{	\textbf{D\'EPARTEMENT DE GENIE}}\\
+		   \scriptsize{	\textbf{INFORMATIQUE}}\\
+				
+			\scriptsize{	\textbf{****************}}\\
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\includegraphics[height=4cm, width=2.8cm]{enspy.png}
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\footnotesize{\textbf{ REPUBLIC OF CAMEROON}} \\
+				
+				\footnotesize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Peace - Work - Fatherland}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\footnotesize{\textbf{UNIVERSITY OF YAOUNDE I}}\\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+				\footnotesize{\textbf{NATIONAL ADVANCED SCHOOL}} \\
+				\footnotesize{\textbf{OF ENGINEERING OF YAOUNDE}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\scriptsize{\textbf{DEPARTMENT OF COMPUTER}}\\
+				\scriptsize{\textbf{ENGINEERING}}\\
+				
+				\footnotesize{\textbf{****************}}\\
+				
+			\end{tabular}	
+		\end{tabular}
+	
+    \rule{10cm}{0.4pt}\\[0.6cm]
+    {\LARGE \textbf{RAPPORT}}\\[0.5cm]
+    {\large Thème : \textit{RECHERCHE D'INFORMATIONS SUR UNE CIBLE: CAS D'N VOISIN DE BANC}}\\[0.4cm]
+    \rule{10cm}{0.4pt}
+\end{center}
+
+\vspace{3cm}
+
+% --- Informations auteur et encadrement ---
+\begin{flushleft}
+    \textbf{Présenté par :}\\
+    Mariella NGWAMBE\\
+     en 4\textsuperscript{e} année - CIN\\[0.7cm]
+    \textbf{Encadrement :}\\
+    M. MINKA THIERRY\\
+    Enseignant-Chercheur\\[0.7cm]
+\end{flushleft}
+
+\vfill
+
+% --- Bas de page ---
+\begin{center}
+    \textbf{Année académique 2025–2026}\\[0.2cm]
+    \textbf{Yaoundé, Octobre 2025}
+\end{center}
+%\tableofcontents
+\begin{document}
+\section*{INTRODUCTION}
+\paragraph{}
+L'évolution rapide des technologies de l'information et de la communication a profondément transformé la manière dont les individus interagissent, partagent et stockent les informations. Dans ce nouvel environnement numérique chaque action en ligne ( publication, commentaire, inscription ou likes) laisse une trace numérique susceptible d'être. Cette réalité a donné naissance à un domaine essentiel de la cybersécurité : l’investigation numérique, encore appelée cyberinvestigation.
+
+Ce champ d’étude vise à collecter, analyser et interpréter des traces numériques dans le but de reconstituer des faits ou d’évaluer le degré d’exposition d’un individu ou d’une organisation. Dans le cadre académique, il s’agit moins de « surveiller » que de comprendre les mécanismes d’exposition de l’information et d’apprendre à les maîtriser.
+
+Le présent travail s’inscrit dans ce cadre pédagogique. Il consiste à réaliser une recherche d’informations publiques sur une personne désignée — en l’occurrence, le voisin de banc — à travers les méthodes de renseignement en sources ouvertes (OSINT). Cet exercice vise à développer les capacités d’analyse, de recoupement d’informations et de réflexion éthique face aux enjeux de la vie privée à l’ère numérique.
+
+Ainsi, après la présentation du contexte et du cadre du travail, il sera procédé à une présentation synthétique de la cible ainsi qu’à une analyse des traces numériques accessibles afin de mettre en évidence les risques liés à la divulgation d’informations personnelles. Ce travail se veut à la fois technique, analytique et éthique, dans le respect strict des limites légales et déontologiques de l’investigation numérique.
+\newpage
+\chapter{CADRE DU TRAVAIL ET PRESENTATION DE LA CIBLE}
+\section{Cadre du travail}
+La trace numérique devenue un mode d''etre numérique est aujourd'hui indissociable de toute activité humaine. Chaque action laisse derrière elle une empreinte susceptible d' être collectée, analysée et interpretée ce qui fait bien entendre le principe d'ëtre-par-la trace. Dans ce contexte, l’investigation numérique s’impose comme un champ d’étude essentiel à la compréhension des comportements en ligne et à la reconstruction d’événements dans le cyberespace. Ce travail s’inscrit dans le cadre du cours d’investigation numérique, dont l’objectif est de familiariser les étudiants avec les méthodes d’analyse telles que la méthode OSINT, de recherche et d’interprétation des traces numériques. Il vise à développer une posture critique et méthodologique face à l’information numérique, en tenant compte à la fois des enjeux techniques, éthiques et juridiques liés à la manipulation des données personnelles.
+\paragraph{}L’exercice proposé qui est la recherche d’informations sur son voisin de banc s’inscrit dans une approche dite abrasive, c’est-à-dire une exploration volontairement intrusive mais sans contact direct avec la cible (intervieuw, interrogatoire,etc.), visant à comprendre la facilité avec laquelle des informations personnelles peuvent être retrouvées à partir de sources ouvertes (Open Source Intelligence – OSINT). Ce travail permet d’expérimenter concrètement la notion de traçabilité numérique et de mettre en évidence la tension entre visibilité, vie privée et sécurité numérique.
+\section{Description de la cible}
+\paragraph{} La cible ici qui est le voisin de banc  sera décrit selon une approche méthodologique : description de son identité physique et de son identité sociale immédiate c'est-à-dire son nom, sa filière et d'autres éléments sociaux observables. Cette démarche s’inscrit dans une logique pédagogique, non intrusive, visant à illustrer les risques liés à la sur-exposition des données personnelles et à l'impact de l'exposition des données numériques pour une mission d'investigation numérique. 
+ \subsection{Identité physique}
+ L'identité physique correspond  à l'ensemble des éléments observables qui permettent d'identifier une personne dans le monde réel, sans recours aux outils numériques. 
+\paragraph{}Notre cible est un jeune adulte de sexe masculin, de taille moyenne et costaud. Son style vestimentaire est simple et sobre, il porte généralement un sac à dos contenant son ordinateur personnel qu'il utilise régulièrement pendant les cours. Il est calme, sociable, un peu réservé et prompt au travail. 
+ \subsection{Identité sociale immédiate}
+ \paragraph{}L’identité sociale immédiate renvoie à la place et au rôle social de la cible dans un environnement donné, notamment celui de la vie académique. Elle inclut la manière dont la cible interagit avec son entourage, le type de relations qu’elle entretient, et les statuts sociaux observables dans ce cadre restreint.
+ \paragraph{}Notre cible, Natanael se montre un peu reservé et actif dans la cadre académique. Il est très peu réactif dans les groupes whatsapp mais toujours prets à collaborer avec ses pairs. 
+\chapter{DESCRIPTION DU PROCESSUS}
+ \section{Les outils}
+ \paragraph{}La recherche d'informations est devenue accessible et facile aux moyens des outils selon les entrées(images, email, etc.) et les attentes (visualisation, géolocalisation). nous présentons un tableau non-exhaustif des outils pouvant etre utilisés. 
+\begin{longtable}{|p{3cm}|p{4cm}|p{3cm}|p{5cm}|}
+\caption{Outils utilisés pour la recherche d’informations numériques} \\
+\hline
+\textbf{Outil} & \textbf{Description / Fonction} & \textbf{Type d’analyse} & \textbf{Utilisation dans le cadre du travail} \\ 
+\hline
+\endfirsthead
+
+\multicolumn{4}{l}{\textit{(Suite du tableau précédent)}}\\
+\hline
+\textbf{Outil} & \textbf{Description / Fonction} & \textbf{Type d’analyse} & \textbf{Utilisation dans le cadre du travail} \\ 
+\hline
+\endhead
+
+\hline
+\multicolumn{4}{r}{\textit{(Suite à la page suivante)}}\\
+\endfoot
+
+\hline
+\endlastfoot
+
+\textbf{WhatsMyName} & 
+Outil OSINT permettant de retrouver les présences d’un pseudonyme sur de multiples plateformes (réseaux sociaux, forums, sites web). &
+Recherche de pseudonymes / corrélation d’identités numériques &
+Identification des sites sur lesquels la cible pourrait posséder un compte public. \\ \hline
+
+\textbf{Google Dorking} &
+Ensemble de requêtes avancées sur Google exploitant des opérateurs spécifiques pour affiner les résultats. &
+Exploration ciblée de contenus publics &
+Recherche d’empreintes numériques, de profils, d’images ou de documents liés à la cible. \\ \hline
+
+\textbf{Social Searcher} &
+Outil en ligne pour la recherche de publications ou de mentions d’un nom sur différents réseaux sociaux. &
+Veille sociale / profilage &
+Observation des activités publiques et des interactions sociales de la cible. \\ \hline
+
+\textbf{TinEye} &
+Moteur de recherche inversée d’images. &
+Corrélation d’images / vérification d’identité visuelle &
+Vérification de la réutilisation ou de la diffusion d’une même photo sur plusieurs comptes. \\ \hline
+
+\textbf{Whois Lookup} &
+Service permettant d’obtenir des informations sur l’enregistrement d’un nom de domaine. &
+Traçabilité de domaine / métadonnées &
+Identification du propriétaire d’un site ou de l’origine d’un nom de domaine lié à la cible. \\ \hline
+
+\textbf{Exiftool} &
+Logiciel permettant d’extraire les métadonnées d’une image ou d’un fichier. &
+Analyse technique de fichiers &
+Récupération d’informations cachées telles que la date, l’appareil ou les coordonnées GPS associées à une photo. \\ \hline
+
+\end{longtable}
+
+\paragraph{}Outre les outils techniques d’investigation, certains outils d’usage courant, comme les moteurs de recherche, jouent également un rôle déterminant dans la phase de collecte d’informations. Leur simplicité d’accès et leur puissance de filtrage en font des leviers efficaces pour orienter la recherche initiale.
+\paragraph{}Pour notre travail, nous avons repertorié dans le tableau suivant les différents outils choisis:
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.4} % espace entre les lignes
+\setlength{\tabcolsep}{6pt} % espace entre les colonnes
+\caption{Description des outils utilisés et justification du choix}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}m{2.8cm}|X|X|}
+\hline
+\textbf{Outil} & \textbf{Description} & \textbf{Raison du choix} \\
+\hline
+
+\textbf{Google Chrome} & 
+Navigateur web développé par Google, il offre une interface rapide et la compatibilité avec de nombreuses extensions utiles à l’investigation numérique (Hunter.io, Shodan, WhatRuns, etc.). &
+Accessible, stable et personnalisable, il constitue la porte d’entrée principale pour la collecte d’informations ouvertes et l’accès aux sources web. \\
+\hline
+
+\textbf{LinkedIn} &
+Réseau social professionnel permettant la création d’un profil détaillant le parcours académique et professionnel, favorisant la mise en réseau et le partage de contenus. &
+Outil privilégié pour obtenir des données sur l’identité professionnelle de la cible : emploi actuel, formation, compétences et relations professionnelles. \\
+\hline
+
+\textbf{TikTok} &
+Plateforme de partage de courtes vidéos où les utilisateurs diffusent du contenu créatif et interactif. Source d’informations sur les comportements et centres d’intérêt. &
+Permet d’observer les aspects comportementaux et sociaux de la cible, tels que le type de contenu partagé, la fréquence d’activité et les interactions sociales. \\
+\hline
+
+\textbf{WhatsMyName} &
+Outil OSINT qui recherche la présence d’un même pseudonyme sur plusieurs plateformes (réseaux sociaux, forums, sites, etc.). &
+Facilite la détection et la centralisation des comptes liés à un pseudonyme afin de cartographier la présence numérique globale de la cible. \\
+\hline
+
+\end{tabularx}
+\end{table}
+\section{Méthodologie}
+ \paragraph{} Notre travail s'inscrit dans le modèle méthodologique OSINT qui repose sur la collecte, la vérification et l'analyse d'informations accessibles publiquement afin de reconstituer un profil ou un réseau d'intéret. Elle est fiable et reconnue dans le domaine de l'investigation numérique pour sa tracabilité et sa reproductibilité.\\
+Dans ce travail, nous avons utilisé \textbf{WhatsMyName} comme outil principal pour effectuer l’ensemble des étapes du processus OSINT. Cette approche permet de centraliser les informations disponibles sur les pseudonymes et identifiants en ligne, tout en respectant le cadre éthique et légal.
+
+\subsection{Collecte d’informations initiales}
+La phase de collecte consiste à identifier toutes les traces visibles et accessibles sur Internet à partir du pseudonyme ou identifiant de la cible.  
+
+\begin{itemize}
+    \item \textbf{Outil utilisé :} WhatsMyName, permettant de détecter la présence du pseudonyme sur différentes plateformes, réseaux sociaux, forums et sites publics.
+    \item \textbf{Données collectées :} liens vers les profils, captures d’écran, photos de profil et adresses associées.
+\end{itemize}
+
+\subsection{Vérification et corrélation}
+Cette étape consiste à recouper les informations obtenues afin de confirmer leur cohérence et fiabilité.
+
+\begin{itemize}
+    \item \textbf{Méthode :} identification des doublons, vérification de la présence du même pseudonyme sur plusieurs plateformes et cohérence des photos et informations associées.
+    \item \textbf{Outil utilisé :} WhatsMyName pour centraliser et croiser les données issues de différentes sources.
+\end{itemize}
+
+\subsection{Analyse et interprétation}
+À partir des données vérifiées, nous produisons une lecture analytique du \textbf{profil numérique et social} de la cible.
+
+\begin{itemize}
+    \item \textbf{Axes d’analyse :} identité physique (âge approximatif, genre, lieu), identité sociale immédiate (statut, relations, comportements observables en ligne), activités et centres d’intérêt.
+    \item \textbf{Outil utilisé :} WhatsMyName, qui permet de visualiser la présence numérique et d’identifier les connexions possibles entre les différents comptes.
+\end{itemize}
+
+\subsection{Synthèse, documentation et traçabilité}
+Enfin, toutes les informations collectées et analysées sont synthétisées dans un \textbf{rapport structuré et traçable}.
+
+\begin{itemize}
+    \item \textbf{Tableaux récapitulatifs :} liste des comptes détectés, liens, captures d’écran et niveau de confiance des informations.
+    \item \textbf{Éthique et limitations :} seules les informations publiquement accessibles ont été exploitées ; aucune donnée privée n’a été collectée.
+\end{itemize}
+\chapter{RESULTATS ET RECOMMANDATIONS}
+\section{Résultats et recommandations}
+
+\subsection{Présentation générale des résultats}
+
+Conformément à la méthodologie de la recherche OSINT, nous avons procédé à une collecte d’informations sur la cible à partir de diverses sources ouvertes.  
+Les outils utilisés ont permis d’obtenir des données issues de plateformes sociales, de moteurs de recherche et d’outils de corrélation de pseudonymes.  
+L’objectif était d’identifier la présence numérique, la cohérence des traces et les éléments révélateurs d’identité numérique.
+
+\subsection{Résultats par plateforme}
+
+\subsubsection{Résultats sur LinkedIn}
+
+LinkedIn a permis d’identifier un profil correspondant au nom de la cible, actif dans le cadre académique et professionnel.  
+Ce profil présente une photographie, une description sommaire du parcours académique, l'obtention de certificats et quelques interactions avec d’autres étudiants.
+
+\begin{table}[H]
+\centering
+\caption{Résultats de la recherche sur LinkedIn}
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{4cm}|}
+\hline
+\textbf{Plateforme} & \textbf{Type de données} & \textbf{Résultat} & \textbf{Interprétation} \\
+\hline
+LinkedIn & Profil professionnel & Profil trouvé & Confirme une identité sociale et académique cohérente avec les informations connues. \\
+\hline
+LinkedIn & Photo / Description & Présente & Renforce la fiabilité du lien entre la personne réelle et le profil numérique. \\
+\hline
+LinkedIn & Activité & Faible à moyenne & Participation modérée dans les échanges ou interactions professionnelles. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Résultats sur TikTok}
+
+TikTok a révélé un compte portant un pseudonyme similaire à celui de la cible. Aucun contenu, ni action menée sur ce compte.
+
+\begin{table}[H]
+\centering
+\caption{Résultats de la recherche sur TikTok}
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{4cm}|}
+\hline
+\textbf{Plateforme} & \textbf{Catégorie} & \textbf{Résultat} & \textbf{Interprétation} \\
+\hline
+TikTok & Réseau social & Compte trouvé & Montre une dimension sociale et expressive de la cible. \\
+\hline
+TikTok & Interaction & Inexistante& L’activité témoigne d’un désintéressement à ce réseau social \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Résultats sur Google Chrome (moteur de recherche Google)}
+
+La recherche sur Google a permis de recenser plusieurs occurrences du nom ou pseudonyme de la cible dans des contextes variés.  
+Les résultats principaux proviennent de profils de réseaux sociaux, de documents partagés et de sites éducatifs.
+
+\begin{table}[H]
+\centering
+\caption{Résultats de la recherche sur Google}
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{4cm}|}
+\hline
+\textbf{Source} & \textbf{Type de résultat} & \textbf{Observation} & \textbf{Interprétation} \\
+\hline
+Google Search & Profils sociaux & Multiples liens trouvés & Confirme la présence numérique diversifiée de la cible. \\
+\hline
+Google Search & Documents partagés & Quelques résultats & Témoigne d’une activité académique ou collaborative en ligne. \\
+\hline
+Google Search & Images associées & Quelques correspondances & Permet de relier les pseudonymes à l’identité visuelle. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Résultats avec l’outil WhatsMyName}
+
+L’outil \textbf{WhatsMyName} a permis d’identifier la présence du pseudonyme \textbf{``Natanael NDJEBAY1''} sur trois plateformes publiques : Internet Archive, Mastodon et The Guardian.  
+Ces résultats renforcent la cohérence du pseudonyme et sa réutilisation sur plusieurs sites.
+
+\begin{table}[H]
+\centering
+\caption{Résultats de la recherche avec WhatsMyName}
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{4cm}|}
+\hline
+\textbf{Plateforme} & \textbf{Catégorie} & \textbf{Statut du compte} & \textbf{Observations / Interprétation} \\
+\hline
+Internet Archive & Miscellaneous & Compte trouvé & Le pseudonyme est lié à un espace d’archivage, suggérant une activité de veille ou de consultation. \\
+\hline
+Mastodon API & Social & Compte trouvé & Présence sur un réseau social décentralisé, témoignant d’un intérêt pour la communication ou la technique. \\
+\hline
+The Guardian & News & Compte trouvé & Pseudonyme associé à un site d’actualités, pouvant refléter une activité de lecture ou de commentaire. \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Analyse globale et interprétation}
+
+L’analyse des résultats met en évidence une identité numérique structurée autour de trois dimensions :
+
+\begin{itemize}
+    \item \textbf{Identité académique :} renforcée par la présence sur LinkedIn et les résultats Google.
+    \item \textbf{Identité sociale :} illustrée par les interactions sur TikTok et Mastodon.
+    \item \textbf{Empreinte numérique passive :} observable via Internet Archive et d’autres traces laissées sur les moteurs de recherche.
+\end{itemize}
+
+La corrélation entre ces différentes sources confirme une cohérence entre l’identité réelle et l’identité numérique, sans trace de comportements à risque.
+
+\subsection{Recommandations}
+
+Sur la base de ces observations, les recommandations suivantes sont formulées :
+
+\begin{enumerate}
+    \item \textbf{Diversifier les pseudonymes :} éviter d’utiliser le même identifiant sur plusieurs plateformes pour réduire la traçabilité.
+    \item \textbf{Surveiller régulièrement son e-réputation :} effectuer des recherches Google et OSINT périodiques pour détecter d’éventuelles données sensibles.
+    \item \textbf{Éduquer à la cybersécurité personnelle :} comprendre les implications de la visibilité numérique et adopter des comportements responsables en ligne.
+\end{enumerate}
+\chapter*{CONCLUSION}
+
+L’étude menée sur la recherche d’informations numériques a mis en évidence le rôle central que joue la trace numérique dans toute démarche d’investigation numérique. Véritable empreinte laissée par chaque action effectuée sur les réseaux et les systèmes informatiques, la trace numérique est devenue un \textit{élément clé de preuve, d’analyse et de compréhension} des comportements dans le cyberespace.\\
+
+Pour l’investigateur, elle constitue un levier essentiel : elle permet de reconstituer les faits, d’identifier les acteurs, de confirmer ou d’infirmer des hypothèses, et d’apporter des éléments de preuve exploitables dans un cadre technique, juridique ou judiciaire. L’exploitation rigoureuse de ces traces, grâce à la méthode \textbf{OSINT} ou à d’autres outils d’investigation, facilite la traçabilité des actions numériques et renforce la fiabilité des conclusions.\\
+
+Pour la victime, la trace numérique représente à la fois une \textit{protection} et une \textit{source de vulnérabilité}. D’une part, elle peut permettre de retracer les événements à l’origine d’une atteinte (harcèlement, vol de données, usurpation d’identité, etc.) et ainsi de soutenir une démarche de plainte ou de réparation. D’autre part, la persistance de ces traces souligne la nécessité pour tout utilisateur de maîtriser la diffusion et la gestion de ses données personnelles en ligne.
+
+Enfin, pour le malfaiteur, la trace numérique devient un \textit{risque permanent}. Si elle peut être utilisée à des fins de dissimulation ou de manipulation, elle reste néanmoins difficile à effacer totalement. Chaque connexion, chaque transaction, chaque interaction laisse des indices susceptibles d’être exploités par les enquêteurs. Ainsi, la trace numérique constitue aussi une faille dans la stratégie d’anonymatdes cybercriminels.\\
+
+En somme, la trace numérique s’impose aujourd’hui comme un \textit{instrument incontournable de l’investigation numérique}, révélant l’interconnexion entre les dimensions techniques, sociales et juridiques du cyberespace. Elle rappelle que, dans un monde où toute action laisse une empreinte, la connaissance et la maîtrise des traces numériques sont aussi importantes que leur exploitation.
+
+\begin{thebibliography}
+\bibitem{osint1}
+Ressources OSINT : \textit{Open Source Intelligence Techniques}, Michael Bazzell, 2021.
+\bibitem{Cours d'investigation numérique}
+ \textit{Chapitre 1:Philosophie et Fondements de l'Investigationnumérique.pdf}
+ 
+\bibitem{whatsmyname}
+WhatsMyName Tool. \textit{Projet OSINT pour la recherche de pseudonymes}. [En ligne] : \url{https://whatsmyname.app}
+
+\bibitem{linkedin}
+LinkedIn. \textit{Réseau social professionnel}. [En ligne] : \url{https://www.linkedin.com}
+
+\end{thebibliography}
+
+\end{document}
+
