@@ -1,0 +1,260 @@
+\documentclass[memoire, 12pt]{report}
+\usepackage[top = 1.9cm, bottom = 1.5cm, left = 1.9cm, right = 2.1cm]{geometry}
+\usepackage{graphicx} 
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{multirow}
+\usepackage{multibib}
+\usepackage{multirow}
+\usepackage{tabularx}
+\newcites{biblio}{Bibliographie}
+\newcites{other}{Autres r\'ef\'erences}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[babel=true]{csquotes}
+\setlength{\fboxrule}{0.01cm}
+\setlength{\fboxsep}{0.5cm}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{url}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{glossaries}
+%\usepackage[thinlines]{easytable}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+\usepackage[bottom]{footmisc}
+%\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{glossaries}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage[utf8]{inputenc}   % encodage du fichier source
+\usepackage[T1]{fontenc}      % encodage des polices
+\usepackage[french]{babel}    % pour le français
+
+% Configuration des styles pour le code Python
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{python}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=python}
+
+
+
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+%\usepackage{fancyhdr}
+\usepackage[Conny]{fncychap}
+%Conny
+%Bjornstrup
+%\pagestyle{Conny}
+\usepackage[french]{babel}
+%\renewcommand{\footrulewidth}{3pt}
+\makeglossaries
+\title{TAF_N1_NGWAMBE MARIELLA}
+\author{}
+\date{MOIS_ICI 2025}
+
+\begin{document}
+\begin{titlepage}
+
+	\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+		\draw[orange!90!orange,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+		
+		\draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+		([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+		
+		
+		\draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+		([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+	\end{tikzpicture}
+	\begin{center}
+		\begin{tabular}{l*{40}{@{\hskip.05mm}c@{\hskip.8mm}} c c}
+			\begin{tabular}{c}
+				
+		\footnotesize{\textbf{R\'EPUBLIQUE DU CAMEROUN}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Paix - Travail - Patrie}} \\
+				
+			\scriptsize{\textbf{******************}}\\ 
+			\footnotesize{	\textbf{UNIVERSIT\'E DE YAOUND\'E I}}\\
+				
+			\scriptsize{	\textbf{****************}} \\
+				
+			\footnotesize{	\textbf{ECOLE NATIONALE SUPERIEURE}} \\
+			\footnotesize{	\textbf{POLYTECHNIQUE DE YAOUNDE}} \\
+				
+			\scriptsize{	\textbf{****************}} \\
+		   \scriptsize{	\textbf{D\'EPARTEMENT DE GENIE}}\\
+		   \scriptsize{	\textbf{INFORMATIQUE}}\\
+				
+			\scriptsize{	\textbf{****************}}\\
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\includegraphics[height=4cm, width=2.8cm]{enspy.png}
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\footnotesize{\textbf{ REPUBLIC OF CAMEROON}} \\
+				
+				\footnotesize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Peace - Work - Fatherland}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\footnotesize{\textbf{UNIVERSITY OF YAOUNDE I}}\\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+				\footnotesize{\textbf{NATIONAL ADVANCED SCHOOL}} \\
+				\footnotesize{\textbf{OF ENGINEERING OF YAOUNDE}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\scriptsize{\textbf{DEPARTMENT OF COMPUTER}}\\
+				\scriptsize{\textbf{ENGINEERING}}\\
+				
+				\footnotesize{\textbf{****************}}\\
+				
+			\end{tabular}	
+		\end{tabular}
+	
+		\vspace{0.5cm}
+		\begin{tabular}{l*{40}{@{\hskip 3.5cm}c@{\hskip5cm}} p{3.5cm} r}
+		\end{tabular}
+		
+		\noindent\rule{\textwidth}{0.7mm}
+		\Large{{\textbf{COLLECTE DE PREUVES NUMÉRIQUES:}}}\\
+		\Large{{\textbf{\textit{Cas d'une ordonnance de renvoi}}}}
+		\noindent\rule{\textwidth}{0.7mm}
+	\end{center}
+		
+	\begin{center}
+	\begin{tabular}{c}
+		
+		\vspace{0.1cm}
+		\normalsize
+	
+	
+		\vspace{0.1cm}
+		\normalsize\textbf{Option }:\\			
+		\textsl{Cybersécurité et Investigation Numérique}
+		
+	\end{tabular}
+	\end{center}
+		
+	\begin{center}
+		\normalsize %\hspace{-2cm}
+		\begin{tabular}{c}
+			\vspace{0.07cm}
+			\hspace{0.02cm} \textbf{\textbf{Rédigé par :}}\\
+			\hspace{0.02cm} \textsl{\textbf{NGWAMBE  MARIELLA}, 22P040}\\\\
+			
+		\end{tabular}
+	\end{center}
+	
+	\begin{center}
+	\hspace{0.02cm} \textbf{Sous l'encadrement de:}\\
+	\hspace{0.02cm} \textsl{M. Thierry MINKA}
+	\end{center}
+	
+    
+	\vspace{2cm}
+	\begin{center}
+		\textbf{Année académique 2025 / 2026}
+	\end{center}
+		
+	\vspace{-1.4cm}
+	
+		
+	\vfill%\null
+	
+\end{titlepage}
+\tableofcontents
+\newpage
+
+\begin{document}
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+\paragraph{}
+Dans le cadre d’une investigation numérique, l’analyse des décisions judiciaires revêt une importance capitale. Elle permet de comprendre non seulement les éléments de preuve retenus par les autorités judiciaires, mais aussi les fondements juridiques ayant conduit à des décisions clés, telles qu’un renvoi de dossier devant une juridiction spécifique.L’étude de l’ordonnance objet du présent travail s’inscrit dans cette logique. En effet, elle constitue un acte juridictionnel déterminant, ayant permis le transfert du dossier vers le tribunal militaire. À travers cette analyse, il s’agira de mettre en lumière les éléments factuels, techniques et juridiques fournis par l'expert judiciaire qui ont ou auraient motivé cette décision. Ce travail vise donc à identifier, dans le contenu même de l’ordonnance, les indices, preuves et fondements légaux ayant conduit le juge d’instruction à estimer que la compétence du tribunal militaire était engagée.
+\chapter{CONTEXTE}
+\paragraph{} L'ordonnance analysée s'inscrit dans le cadre d'une procédure d'investigation numérique portant sur des faits dont la nature soulevé la question de la compétence juridictionnelle. L'ordonnance de renvoie  rendue par le juge d'instruction  du Tribunal Militaire de Yaoundé qui établit le contexte d'analyse d'une affaire criminelle complxe et médiatisé, l'assassinat du journaliste MBANI ZOGO ARSENE SALOMON dit " MARTINEZ ZOGO". Ce cas est particulèrement pertinent pour notre cours , car la décision s'appuie de manière prépondérante sur l'exploitation des traces numériques et des données de communication pour contredire les alibis des mis en cause et reconstituer les faits. L'objectif de cette étude est de démontrer le role essentiel de l'expertise judiciaire en matière de numérique dans un dossier de crime organisé. L 'information judiciaire  reposé massivement sur l'analyse de données passives fournies par les opérateurs de télécommunications et les systèmemes de surveillance. 
+\paragraph{}
+\chapter{ELEMENTS IDENTIFIÉS}
+\paragraph{}
+Les éléments probants essentiels qui ont permis au juge d'instruction de fonder l'ordonnance de renvoi proviennent majoritairement des expertises techniques. Nous les avons regroupés autour de trois axes principaux:Les traces d'appel et de localisation, le renseignement électronique et la surveillance et l'exploitation de dispositifs et supports média
+ \section{Les traces d'appel et de localisation}
+  \paragraph{}Cette catégorie a permis de reconstituer la chronologie exacte des événements et de contredire les déclarations des suspects concernant leur localisation au moment du crime.
+   \subsection{La refutation de l'alibi d'assassinat par géolocalisation}
+     L'exploitation des données de localisation téléphonique a démontré que les mis en cause TONGUE NANA, DAOUDA et LAMFU JOHNSON étaient présents à EBOGO à 23h01, ce qui coïncidait avec l'heure présumée de l'assassinat et réfutait leur alibi de simple filature.
+    \subsection{Preuve de la coordination pré-assaut:}
+    L'examen des données d'appels a révélé que la victime, Martinez Zogo, a appelé SAVOM Martin quelques minutes avant d'être enlevé, établissant un lien téléphonique immédiat entre la victime et un complice présumé.
+    \subsection{Complicité et passation d'information :}\\
+     Les listings téléphoniques ont révélé que BIDZONGO MBEDE ALBERT a appelé AMOUGOU BELINGA "immédiatement après" avoir rencontré Martinez Zogo, confirmant la passation d'informations sensibles au commanditaire présumé.
+ \section{Le renseignement électroniques et la surveillance}\\
+ Ces preuves confirment l'utilisation de moyens techniques et de données sensibles pour la planification et la préparation de l'opération.
+  \subsection{Traçabilité des renseignements ciblés :}\\La fiche de géolocalisation et la fiche technique de Martinez ZOGO ont été fournies à DANWE JUSTIN par des agents de la division de la Surveillance Électronique de la DGRE (SAÏWANG YVES et HEUDJI GUY SERGE) contre de l'argent. 
+  \subsection{Preuve Audio:}\\
+  Dame MOUDIE Emmanuella, Cheffe de la Division de la Surveillance Électronique à la DGRE, a affirmé détenir une bande sonore sur laquelle l'agent BIDZONGO MBEDE rend compte à AMOUGOU BELINGA des documents compromettants qu'il a remis à la victime.
+ \section{Exploitation de dispositifs et supports média}\\
+ Ces éléments ont permis de lier les commanditaires à l'opération et d'établir le mobile du crime.
+  \subsection{Vidéosurveillance de commandement et de compte rendu :}\\
+  L'examen des images de vidéosurveillance au bureau d'AMOUGOU BELINGA a permis de constater que DANWE JUSTIN s'y est rendu les 16 et 18 janvier 2023 pour faire le compte rendu de l'opération, renforçant le rôle de commandement et refutant totalement les propos d'AMOUGOU BELINGA.
+  \subsection{Exploitation du téléphone de la victime :}\\
+  L'exploitation du téléphone de Martinez Zogo a révélé des messages où il qualifiait les documents reçus (qui ont servi de mobile au crime) de « BOMBES ».
+  
+\paragraph{}L'analyse des preuves numériques contenues dans l'ordonnance de renvoi révèle que les traces digitales n'ont pas seulement été de simples indices mais des fondations solides sur lesquelles le juge a pu établir la vérité des faits. \\
+La convergence des données de géolocalisation démontrant la présence des assassins sur les lieux de l'assassinat à l'heure du crime , des listings d'appels établissant la communication entre complices et  des supports média vidéosurveillance du compte-rendu, traçabilité des "fiches techniques" a permis de déconstruire les alibis, de confirmer la chaîne de commandement et de prouver la préméditation. Cette mobilisation systématique et croisée des preuves numériques illustre le rôle désormais systémique de l'investigation digitale dans la résolution de crimes complexes.
+
+\chapter*{CONCLUSION}
+\addcontentsline{toc}{chapter}{Conclusion}
+\paragraph{}Ce travail d'analyse a permis de démontrer comment l'analyse forensic des communications peut efficacement contrer les tentatives d'occultation et les mensonges des mis en cause. En se concentrant sur les métadonnées (qui sont difficilement falsifiables), l'expert a pu révéler la planification et établir le mobile. En conclusion, l'Ordonnance de Renvoi est la preuve que, dans le contexte judiciaire moderne, l'enquête pénale s'appuie de plus en plus sur les traces numériques passives faisant de l'expert en investigation numérique un acteur central pour la manifestation de la vérité.
+
+\end{document}
