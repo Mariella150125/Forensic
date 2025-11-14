@@ -1,0 +1,293 @@
+\documentclass[memoire, 12pt]{report}
+\usepackage[top = 1.9cm, bottom = 1.5cm, left = 1.9cm, right = 2.1cm]{geometry}
+\usepackage{graphicx} 
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{multirow}
+\usepackage{multibib}
+\usepackage{multirow}
+\usepackage{tabularx}
+\newcites{biblio}{Bibliographie}
+\newcites{other}{Autres r\'ef\'erences}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[babel=true]{csquotes}
+\setlength{\fboxrule}{0.01cm}
+\setlength{\fboxsep}{0.5cm}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{url}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{glossaries}
+%\usepackage[thinlines]{easytable}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+\usepackage[bottom]{footmisc}
+%\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{glossaries}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage[utf8]{inputenc}   % encodage du fichier source
+\usepackage[T1]{fontenc}      % encodage des polices
+\usepackage[french]{babel}    % pour le français
+
+% Configuration des styles pour le code Python
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{python}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=python}
+
+
+
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+%\usepackage{fancyhdr}
+\usepackage[Conny]{fncychap}
+%Conny
+%Bjornstrup
+%\pagestyle{Conny}
+\usepackage[french]{babel}
+%\renewcommand{\footrulewidth}{3pt}
+\makeglossaries
+\title{TAF_N1_NGWAMBE MARIELLA}
+\author{}
+\date{MOIS_ICI 2025}
+
+\begin{document}
+\begin{titlepage}
+
+	\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+		\draw[orange!90!orange,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+		
+		\draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+		([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+		
+		
+		\draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+		([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+	\end{tikzpicture}
+	\begin{center}
+		\begin{tabular}{l*{40}{@{\hskip.05mm}c@{\hskip.8mm}} c c}
+			\begin{tabular}{c}
+				
+		\footnotesize{\textbf{R\'EPUBLIQUE DU CAMEROUN}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Paix - Travail - Patrie}} \\
+				
+			\scriptsize{\textbf{******************}}\\ 
+			\footnotesize{	\textbf{UNIVERSIT\'E DE YAOUND\'E I}}\\
+				
+			\scriptsize{	\textbf{****************}} \\
+				
+			\footnotesize{	\textbf{ECOLE NATIONALE SUPERIEURE}} \\
+			\footnotesize{	\textbf{POLYTECHNIQUE DE YAOUNDE}} \\
+				
+			\scriptsize{	\textbf{****************}} \\
+		   \scriptsize{	\textbf{D\'EPARTEMENT DE GENIE}}\\
+		   \scriptsize{	\textbf{INFORMATIQUE}}\\
+				
+			\scriptsize{	\textbf{****************}}\\
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\includegraphics[height=4cm, width=2.8cm]{PO Y.jpg}
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\footnotesize{\textbf{ REPUBLIC OF CAMEROON}} \\
+				
+				\footnotesize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Peace - Work - Fatherland}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\footnotesize{\textbf{UNIVERSITY OF YAOUNDE I}}\\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+				\footnotesize{\textbf{NATIONAL ADVANCED SCHOOL}} \\
+				\footnotesize{\textbf{OF ENGINEERING OF YAOUNDE}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\scriptsize{\textbf{DEPARTMENT OF COMPUTER}}\\
+				\scriptsize{\textbf{ENGINEERING}}\\
+				
+				\footnotesize{\textbf{****************}}\\
+				
+			\end{tabular}	
+		\end{tabular}
+	
+		\vspace{0.5cm}
+		\begin{tabular}{l*{40}{@{\hskip 3.5cm}c@{\hskip5cm}} p{3.5cm} r}
+		\end{tabular}
+		
+		\noindent\rule{\textwidth}{0.7mm}
+		\Large{{\textbf{ORDONNANCE:}}}\\
+		\Large{{\textbf{\textit{HYPOTHÈSES ET CONFRONTATION}}}}
+		\noindent\rule{\textwidth}{0.7mm}
+	\end{center}
+		
+	\begin{center}
+	\begin{tabular}{c}
+		
+		\vspace{0.1cm}
+		\normalsize
+	
+	
+		\vspace{0.1cm}
+		\normalsize\textbf{Option }:\\			
+		\textsl{Cybersécurité et Investigation Numérique}
+		
+	\end{tabular}
+	\end{center}
+		
+	\begin{center}
+		\normalsize %\hspace{-2cm}
+		\begin{tabular}{c}
+			\vspace{0.07cm}
+			\hspace{0.02cm} \textbf{\textbf{Rédigé par :}}\\
+			\hspace{0.02cm} \textsl{\textbf{NGWAMBE  MARIELLA}, 22P040}\\\\
+			
+		\end{tabular}
+	\end{center}
+	
+	\begin{center}
+	\hspace{0.02cm} \textbf{Sous l'encadrement de:}\\
+	\hspace{0.02cm} \textsl{M. Thierry MINKA}
+	\end{center}
+	
+    
+	\vspace{2cm}
+	\begin{center}
+		\textbf{Année académique 2025 / 2026}
+	\end{center}
+		
+	\vspace{-1.4cm}
+	
+		
+	\vfill%\null
+	
+\end{titlepage}
+\tableofcontents
+\newpage
+
+\begin{document}
+\chapter*{INTRODUCTION}
+\addcontentsline{toc}{chapter}{INTRODUCTION}
+\paragraph{}Le présent travail a pour objectif d'appliquer la méthodologie d'investigation numérique, notamment les étapes de la formulation et de la confirmation/réfutation des hypothèses, à l'affaire de l'assassinat de Martinez Zogo. L'analyse s'appuie sur les faits établis par l'Ordonnance de Renvoi n° 015/ORD/JI.NZIE/TMY du 29/02/2024.Nous allons évaluer trois (3) scénarios plausibles ou initialement évoqués, en confrontant chacunes d'eux aux traces numériques (CDR, géolocalisation, vidéosurveillance) pour déterminer leur validité.
+\chapter{HYPOTHESES DE SCENARIO}
+ \paragraph{}Le processus investigatif universel impose une méthodologie rigoureuse pour la génération des hypothèses d'une part et la confrontation ( confirmation ou infirmation) des hypothèses. Ici, il s'agit de ne pas prouver directement un scénario unique mais à valider méthodiquement tous les scénarios par la preuve. 
+ \paragraph{}Les trois hypothèses générées après lecture de l'ordonnance sont: 
+  \begin{itemize}
+    \item[$\mathbf{H1}$] \textbf{Assassinat prémédité:} la mission a été commanditée pour l'élimination de la victime, avec préparation logistique.
+    \item[$\mathbf{H2}$] \textbf{Opération Isolé :} L'opération fatale est le fait d'une initiative isolée de DANWE JUSTIN (opération "rogue"), sans ordre ni coordination d'un commanditaire supérieur.
+    \item[$\mathbf{H3}$] \textbf{Décès pendant la Torture :} La victime est décédée sous les sévices infligés par le premier commando (EBO'O, LENOIR, etc.), avant le passage du second groupe.
+\chapter{CONFRONTATION DES HYPOTHÈSES}
+    \paragraph{}Après avoir formulé les hypothèses, nous allons procéder à la confrontation qui consiste à comparer sytématiquement chaque hypothèse aux éléments de preuve numérique pour déterminer si celle-ci est affirmée ou refutée.
+       \begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{|p{5.2cm}|p{2.5cm}|p{8.3cm}|}
+\hline
+\textbf{Hypothèse de Scénario} & 
+\centering \textbf{État de l’Hypothèse (A/R)} & 
+\textbf{Éléments de Preuve Numérique  Clés} \\
+\hline
+
+\textbf{H1 — Assassinat prémédité :} La mission a été commanditée pour l’élimination de la victime, avec préparation logistique. &
+\centering \textbf{Affirmée (A)} &
+\begin{itemize}
+    \item \textbf{Vidéosurveillance } : Film de rendu de compte de DANWE JUSTIN à AMOUGOU BELINGA les 16 et 18 janvier (avant et après l’acte).
+    \item \textbf{Géolocalisation} : Localisation du second commando (TONGUE NANA, etc.) à Ebogo à 23h01, prouvant la phase létale (strangulation).
+    \item \textbf{Renseignement Numérique} : Achat des « fiches de géolocalisation » et « fiches techniques » (données DGRE) confirmant la préparation.
+\end{itemize} \\
+\hline
+
+\textbf{H2 — Opération isolée :} L’opération fatale serait une initiative isolée de DANWE JUSTIN, sans commanditaire. &
+\centering \textbf{Réfutée (R)} &
+\begin{itemize}
+    \item \textbf{Vidéosurveillance} : Les visites de DANWE JUSTIN dans le bureau d' AMOUGOU BELINGA pour l'ordonnancement et le « compte rendu » prouvent une coordination hiérarchique.
+    \item \textbf{Preuve Audio} : La bande sonore et les messages-textes de BIDZONGO MBEDE à AMOUGOU BELINGA confirment la supervision d’un niveau supérieur.
+\end{itemize} \\
+\hline
+
+\textbf{H3 — Décès pendant la torture :} La victime serait décédée sous les sévices infligés par le premier commando (EBO’O, LENOIR, etc.), avant l’arrivée du second groupe. &
+\centering \textbf{Réfutée (R)} &
+\begin{itemize}
+    \item \textbf{Géolocalisation} : Le premier commando est localisé en route vers le Mess des Officiers au moment où le second arrive à Ebogo.
+\end{itemize} \\
+\hline
+\end{tabular}
+\caption{Tableau des hypothèses de scénario, leur statut et les preuves associées}
+\end{table}
+
+    \section{Conclusion des résultats de la confrontation}
+        La confrontation systématique des hypothèses aux éléments de preuve a permis de valider la thèse principale de l'assassinat prémédité par l'élimination des scénarios concurrents :
+
+\begin{enumerate}
+    \item \textbf{Le rôle réfutateur des métadonnées.}
+    Les données numériques ont agi comme un filtre implacable.
+    \begin{itemize}
+        \item La \textbf{Géolocalisation} a permis de \textbf{réfuter} de manière définitive le scénario de proximité (\textbf{H3 : Décès pendant la torture}), en prouvant l'absence des premiers tortionnaires au moment critique.
+        \item La \textbf{Vidéosurveillance } a anéanti l'hypothèse de l'acte isolé (\textbf{H2 : Opération Rogue}) en fournissant la preuve matérielle du compte rendu hiérarchique au commanditaire.
+    \end{itemize}
+
+    \item \textbf{L'Affirmation par Élimination.}
+    C'est la force de la méthodologie. En éliminant toutes les hypothèses de confusion, de spontanéité ou d'initiative isolée, le processus a permis d'affirmer, par élimination, la validité du scénario le plus complexe :
+    \begin{itemize}
+        \item Celui de l'Assassinat Prémédité (\textbf{H1}), appuyé par la coordination logistique (Renseignement DGRE) et les preuves de supervision.
+    \end{itemize}
+\end{enumerate}
+\chapter*{CONCLUSION}
+\addcontentsline{toc}{chapter}{CONCLUSION}
+\paragraph{} L'étude de l'Ordonnance de Renvoi dans l'affaire Martinez ZOGO a servi de terrain d'application concret et critique pour la méthodologie de l'Investigation Numérique . Ce travail sur la formulation des hypothèses de scénario et leur confrontation systématique constitue la matérialisation des étapes E9 et E9 bis du Processus Investigatif Universel (PIU). Ces étapes ne sont pas de simples formalités ; elles sont le mécanisme de sécurité qui garantit la défendabilité des conclusions. En utilisant la preuve numérique, nous avons pu démontrer d'une part l'efficacité du principe de falsification en investigation numérique et d'autre part confirmer la convergence des métadonnées crée une traçabilité complète et une charge probante irréfutable.
+\end{document}
