@@ -1,0 +1,413 @@
+\documentclass[memoire, 12pt]{report}
+\usepackage[top = 1.9cm, bottom = 1.5cm, left = 1.9cm, right = 2.1cm]{geometry}
+\usepackage{graphicx} 
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{multirow}
+\usepackage{multibib}
+\usepackage{multirow}
+\usepackage{tabularx}
+\newcites{biblio}{Bibliographie}
+\newcites{other}{Autres r\'ef\'erences}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[babel=true]{csquotes}
+\setlength{\fboxrule}{0.01cm}
+\setlength{\fboxsep}{0.5cm}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{url}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{glossaries}
+%\usepackage[thinlines]{easytable}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+\usepackage[bottom]{footmisc}
+%\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{glossaries}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+
+\usepackage{array}
+\usepackage{longtable}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage[utf8]{inputenc}   % encodage du fichier source
+\usepackage[T1]{fontenc}      % encodage des polices
+\usepackage[french]{babel}    % pour le français
+
+% Configuration des styles pour le code Python
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{python}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=python}
+
+
+
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} 
+%\usepackage{fancyhdr}
+\usepackage[Conny]{fncychap}
+%Conny
+%Bjornstrup
+%\pagestyle{Conny}
+\usepackage[french]{babel}
+%\renewcommand{\footrulewidth}{3pt}
+\makeglossaries
+\title{TAF_N1_NGWAMBE MARIELLA}
+\author{}
+\date{MOIS_ICI 2025}
+
+\begin{document}
+\begin{titlepage}
+
+	\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+		\draw[orange!90!orange,line width=4pt] ([xshift=-1.5cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=1.5cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=1.5cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1.5cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+		
+		\draw ([yshift=0.5cm,xshift=-0.5cm]A)-- ([yshift=0.5cm,xshift=0.5cm]B)--
+		([yshift=-0.5cm,xshift=0.5cm]B) --([yshift=-0.5cm,xshift=-0.5cm]B)--([yshift=0.5cm,xshift=-0.5cm]C)--([yshift=0.5cm,xshift=0.5cm]C)--([yshift=-0.5cm,xshift=0.5cm]C)-- ([yshift=-0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=-0.5cm]D)--([yshift=0.5cm,xshift=0.5cm]D)--([yshift=-0.5cm,xshift=0.5cm]A)--([yshift=-0.5cm,xshift=-0.5cm]A)--([yshift=0.5cm,xshift=-0.5cm]A);
+		
+		
+		\draw ([yshift=-0.3cm,xshift=0.3cm]A)-- ([yshift=-0.3cm,xshift=-0.3cm]B)--
+		([yshift=0.3cm,xshift=-0.3cm]B) --([yshift=0.3cm,xshift=0.3cm]B)--([yshift=-0.3cm,xshift=0.3cm]C)--([yshift=-0.3cm,xshift=-0.3cm]C)--([yshift=0.3cm,xshift=-0.3cm]C)-- ([yshift=0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=0.3cm]D)--([yshift=-0.3cm,xshift=-0.3cm]D)--([yshift=0.3cm,xshift=-0.3cm]A)--([yshift=0.3cm,xshift=0.3cm]A)--([yshift=-0.3cm,xshift=0.3cm]A);
+
+	\end{tikzpicture}
+	\begin{center}
+		\begin{tabular}{l*{40}{@{\hskip.05mm}c@{\hskip.8mm}} c c}
+			\begin{tabular}{c}
+				
+		\footnotesize{\textbf{R\'EPUBLIQUE DU CAMEROUN}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Paix - Travail - Patrie}} \\
+				
+			\scriptsize{\textbf{******************}}\\ 
+			\footnotesize{	\textbf{UNIVERSIT\'E DE YAOUND\'E I}}\\
+				
+			\scriptsize{	\textbf{****************}} \\
+				
+			\footnotesize{	\textbf{ECOLE NATIONALE SUPERIEURE}} \\
+			\footnotesize{	\textbf{POLYTECHNIQUE DE YAOUNDE}} \\
+				
+			\scriptsize{	\textbf{****************}} \\
+		   \scriptsize{	\textbf{D\'EPARTEMENT DE GENIE}}\\
+		   \scriptsize{	\textbf{INFORMATIQUE}}\\
+				
+			\scriptsize{	\textbf{****************}}\\
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\includegraphics[height=4cm, width=2.8cm]{enspy.png}
+				
+			\end{tabular} &
+			\begin{tabular}{c}
+				
+				\footnotesize{\textbf{ REPUBLIC OF CAMEROON}} \\
+				
+				\footnotesize{\textbf{****************}} \\
+				
+					\scriptsize{\textbf{Peace - Work - Fatherland}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\footnotesize{\textbf{UNIVERSITY OF YAOUNDE I}}\\
+				
+				\scriptsize{\textbf{****************}} \\
+				
+				\footnotesize{\textbf{NATIONAL ADVANCED SCHOOL}} \\
+				\footnotesize{\textbf{OF ENGINEERING OF YAOUNDE}} \\
+				
+				\scriptsize{\textbf{****************}} \\
+				\scriptsize{\textbf{DEPARTMENT OF COMPUTER}}\\
+				\scriptsize{\textbf{ENGINEERING}}\\
+				
+				\footnotesize{\textbf{****************}}\\
+				
+			\end{tabular}	
+		\end{tabular}
+	
+		\vspace{0.5cm}
+		\begin{tabular}{l*{40}{@{\hskip 3.5cm}c@{\hskip5cm}} p{3.5cm} r}
+		\end{tabular}
+		
+		\noindent\rule{\textwidth}{0.7mm}
+		\Large{{\textbf{CREATION D'UN PROCOLE:}}}\\
+		\Large{{\textbf{\textit{Cas du protocole AHR}}}}
+		\noindent\rule{\textwidth}{0.7mm}
+	\end{center}
+		
+	\begin{center}
+	\begin{tabular}{c}
+		
+		\vspace{0.1cm}
+		\normalsize
+	
+	
+		\vspace{0.1cm}
+		\normalsize\textbf{Option }:\\			
+		\textsl{Cybersécurité et Investigation Numérique}
+		
+	\end{tabular}
+	\end{center}
+		
+	\begin{center}
+		\normalsize %\hspace{-2cm}
+		\begin{tabular}{c}
+			\vspace{0.07cm}
+			\hspace{0.02cm} \textbf{\textbf{Rédigé par :}}\\
+			\hspace{0.02cm} \textsl{\textbf{NGWAMBE  MARIELLA}, 22P040}\\\\
+			
+		\end{tabular}
+	\end{center}
+	
+	\begin{center}
+	\hspace{0.02cm} \textbf{Sous l'encadrement de:}\\
+	\hspace{0.02cm} \textsl{M. Thierry MINKA}
+	\end{center}
+	
+    
+	\vspace{2cm}
+	\begin{center}
+		\textbf{Année académique 2025 / 2026}
+	\end{center}
+		
+	\vspace{-1.4cm}
+	
+		
+	\vfill%\null
+	
+\end{titlepage}
+\tableofcontents
+\newpage
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction : Le Défi de l'Opposabilité Conditionnelle}
+
+Le paysage de l'investigation numérique est marqué par une tension croissante entre la nécessité d'établir la \textbf{Fiabilité} des preuves et le respect strict de la \textbf{Confidentialité} des données non pertinentes (Trilemme CRO). Face aux impératifs légaux (protection de la vie privée), les protocoles classiques de scellement par hachage sont insuffisants dès lors qu'une censure est requise. Le protocole \textbf{A-H-R (Ancrage-Hachage-Révocation)} est développé pour adresser cette lacune. S'inspirant de l'esprit modulaire et sécuritaire de l'architecture Q2CSI, il propose un mécanisme d'engagement simple mais cryptographiquement robuste, permettant de prouver l'intégrité des parties non censurées d'une preuve.
+
+\hrule
+\vspace{0.5cm}
+
+\chapter{ PROTOCOLE A-H-R : UN PROTOCOLE THÉORIQUE}
+
+\section{Contexte et Problématique : La Censure Intègre des Preuves}
+
+\subsection{Enjeux}
+L'investigation numérique doit concilier la nécessité de produire des preuves numériques avec l'obligation éthique et légale de masquer les informations relatives aux tiers non impliqués.
+
+\subsection{Problématique (Paradoxe de la Censure)}
+La censure (*redaction*) altère structurellement le fichier original, rendant invalide toute preuve d'intégrité basée sur le hachage simple. Le défi est de prouver l'\textbf{Intégrité} des parties non censurées tout en garantissant la \textbf{Confidentialité} des parties masquées.
+
+\subsection{Fondement Théorique (Le Trilemme CRO et l'Opposabilité Conditionnelle)}
+Le Protocole \textbf{A-H-R} vise à maximiser la \textbf{Fiabilité (R)} et la \textbf{Confidentialité (C)}, en assurant une \textbf{Opposabilité (O)} particulière :
+
+\begin{quote}
+    \textbf{Définition de l'Opposabilité Conditionnelle :} Principe selon lequel la valeur légale et la fiabilité d'une preuve numérique qui a subi une modification intentionnelle (censure) \textbf{ne peuvent être établies qu'à la condition \emph{sine qua non} que l'opération de vérification finale (la Révocation) prouve que le document publié ($D_{Censuré}$) est parfaitement réversible en l'original ($D_{Original}$).} Cette condition est atteinte par l'égalité cryptographique $H_{Reconstruit} = H_{Original}$.
+\end{quote}
+
+\begin{itemize}
+    \item \textbf{R} : Garantir que $H_{Original}$ n'est vérifiable que par la reconstruction réversible.
+    \item \textbf{C} : Masquer les données sensibles de la preuve publiée $D_{Censuré}$.
+    \item \textbf{O} : L'opposabilité est assurée par la vérification de l'égalité cryptographique.
+\end{itemize}
+
+\section{Architecture du Protocole A-H-R}
+
+\subsection{Couche Gold (Scellement/Ancrage)}
+\begin{itemize}
+    \item \textbf{Composant :} Le \textbf{Hash $H_{Original}$} (\textbf{Non-Répudiation}).
+    \item \textbf{Technologie :} Fonctions de hachage résistantes (ex: \textbf{SHA-3 / Keccak}), pour une robustesse à \textbf{perspective post-quantique}.
+\end{itemize}
+
+\subsection{Couche Iron (Censure/Séquestre)}
+\begin{itemize}
+    \item \textbf{Composant :} Le \textbf{Manifeste de Révocation (MR)}.
+    \item \textbf{Fonction :} Document sécurisé qui contient l'ensemble des métadonnées nécessaires à la reconstruction de l'original.
+    \item \textbf{Technologie :} \textbf{Chiffrement AES-256} pour le stockage.
+\end{itemize}
+
+\subsection{Couche Clay (Vérification/Opposabilité)}
+\begin{itemize}
+    \item \textbf{Composant :} L'\textbf{Opération de Révocation}.
+    \item \textbf{Fonction :} Permet la reconstruction mathématique du fichier original ($D_{Reconstruit}$) et la comparaison cryptographique ($H_{Reconstruit} \stackrel{?}{=} H_{Original}$).
+\end{itemize}
+
+\section{Flux Opérationnel et Algorithmique}
+
+\subsection{Algorithme de Scellement Initial (Phase d'Ancrage)}
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+\textbf{Action} & \textbf{Description détaillée} \\
+\midrule
+\textbf{Input :} $D_{Original}$ (Fichier de preuve brut) & \\
+1. Hachage & Calculer $H_{Original} = \text{SHA-3}(D_{Original})$. \\
+2. Enregistrement & Ancrer $H_{Original}$ dans le Procès-Verbal de Saisie. \\
+\textbf{Output :} $H_{Original}$ (Engagement Initial) & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Algorithme de Censure et Séquestre (Phase de Censure)}
+\begin{center}
+\begin{longtable}{ll}
+\toprule
+\textbf{Action} & \textbf{Description détaillée} \\
+\midrule
+\textbf{Input :} $D_{Original}$, Liste des Offsets de Censure $O$ & \\
+1. Copie & Créer $D_{Censuré} \leftarrow D_{Original}$. \\
+2. Censure & Pour chaque offset $o \in O$ : 1. Extraire et stocker $V_{o} = D_{Original}[o]$. 2. Remplacer $D_{Censuré}[o]$ par \texttt{[CENSURÉ\_X]}. \\
+3. Manifeste & Créer $MR = \{ (o, V_{o}, \text{Justification légale}) \}$. \\
+4. Séquestre & Chiffrer $MR$ avec une clé unique $K_{MR}$. Remettre $MR_{chiffré}$ et $K_{MR}$ sous scellé judiciaire. \\
+\textbf{Output :} $D_{Censuré}$ (Preuve pour publication) et $MR_{chiffré}$ (Manifeste sous scellé) & \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\subsection{Algorithme de Vérification Judiciaire (Phase de Révocation)}
+\begin{center}
+\begin{longtable}{ll}
+\toprule
+\textbf{Action} & \textbf{Description détaillée} \\
+\midrule
+\textbf{Input :} $D_{Censuré}$, $MR$ (Déchiffré et Authentifié), $H_{Original}$ & \\
+1. Reconstruction & Créer $D_{Reconstruit} \leftarrow D_{Censuré}$. \\
+2. Injection & Pour chaque enregistrement $(o, V_{o}, \ldots)$ dans $MR$ : Remplacer $D_{Reconstruit}[o]$ par $V_{o}$. \\
+3. Hachage & Calculer $H_{Reconstruit} = \text{SHA-3}(D_{Reconstruit})$. \\
+4. Contrôle & Si $H_{Reconstruit} = H_{Original}$ : \textbf{Authenticité vérifiée (Opposabilité Établie)}. Sinon : Intégrité compromise. \\
+\textbf{Output :} Verdict d'Intégrité (Vrai/Faux) & \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\section{Implémentation Théorique (Script de Référence)}
+
+\begin{lstlisting}[caption={Script Python du Protocole A-H-R}]
+import hashlib
+import json
+from datetime import datetime
+
+class AHRSecurityException(Exception): pass
+
+class Protocol_AHR:
+    """
+    Protocole A-H-R (Ancrage-Hachage-Révocation)
+    Gestion de la confidentialité par séquestre et vérification de l'intégrité par hash.
+    """
+
+    def __init__(self, data_originale):
+        self.data_originale = data_originale
+        self.H_original = self._hash(data_originale)
+        self.manifeste_revocation = []
+        self._ancrage()
+
+    def _hash(self, data):
+        """Utilise SHA-256 comme fonction de hachage sécurisée (Perspective Post-Quantique)."""
+        return hashlib.sha256(data.encode('utf-8')).hexdigest()
+    
+    def _ancrage(self):
+        """Phase 1: Ancrage et enregistrement du scellé numérique."""
+        print(f"[Ancrage] Hachage de l'Original : {self.H_original}")
+        print(f"[Ancrage] Horodatage P-V : {datetime.now().isoformat()}")
+        print("-" * 30)
+
+    def censurer(self, index_start, index_end, justification):
+        """Phase 2: Censure et construction du Manifeste de Révocation (MR)."""
+        bloc_original = self.data_originale[index_start:index_end]
+        
+        # 1. Ajout au MR (séquestre)
+        self.manifeste_revocation.append({
+            "start": index_start,
+            "end": index_end,
+            "valeur_originale": bloc_original,
+            "justification": justification
+        })
+        
+        # 2. Censure de la copie de travail
+        data_liste = list(self.data_originale)
+        data_liste[index_start:index_end] = list("[CENSURÉ]") 
+        self.data_originale_censuree = "".join(data_liste)
+        
+        return self.data_originale_censuree
+
+    def verifier_revocation(self, data_censuree, manifeste_chiffre_deverrouille):
+        """Phase 3: Reconstruction et Contrôle d'Intégrité (effectué par l'expert)."""
+        
+        data_reconstruite = list(data_censuree)
+        
+        manifeste_trie = sorted(manifeste_chiffre_deverrouille, key=lambda x: x['start'], reverse=True)
+
+        # 1. Reconstruction via le MR déchiffré
+        for item in manifeste_trie:
+            start, end = item["start"], item["end"]
+            valeur_orig = item["valeur_originale"]
+            
+            data_reconstruite[start:start + len("[CENSURÉ]")] = list(valeur_orig)
+
+        D_Reconstruit = "".join(data_reconstruite)
+        
+        # 2. Hachage de la reconstruction
+        H_reconstruit = self._hash(D_Reconstruit)
+
+        # 3. Contrôle final
+        if H_reconstruit == self.H_original:
+            return True, H_reconstruit
+        else:
+            return False, H_reconstruit
+\end{lstlisting}
+
+\hrule
+\vspace{0.5cm}
+
+\section*{Conclusion : Nature du Protocole et Perspectives}
+
+Le \textbf{Protocole A-H-R} est un \textbf{protocole théorique} dont les fondements reposent sur des briques technologiques éprouvées (\textbf{hachage cryptographique}) et des concepts juridico-techniques avancés (le \textbf{Manifeste de Révocation} et le \textbf{scellement conditionnel}).
+
+Il n'est pas un protocole expérimental car sa mise en œuvre dans le code de référence est simplifiée, mais il offre une feuille de route claire pour un développement ultérieur.
+
+Sa plus grande force réside dans sa \textbf{perspective Post-Quantique} native : n'utilisant pas d'algorithmes de cryptographie asymétrique pour l'intégrité, mais s'appuyant uniquement sur la robustesse du hachage, il demeure pertinent même après l'avènement d'ordinateurs quantiques généralistes.
+
+\end{document}
