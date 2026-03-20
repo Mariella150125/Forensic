@@ -1,0 +1,268 @@
+% ==============================================================================
+% Fichier     : Style_Devoir.sty
+% Description : Style Institutionnel ENSPY
+%               Texte Noir & Accents Bleu Canard / Doré
+%               Inclut la commande \MakeTitleENSPY
+% Version     : 4.0 — 2026
+% ==============================================================================
+\ProvidesPackage{Style_Devoir}[2026/03/19 v4.0 Style ENSPY complet]
+
+% --------------------------------------------------------------------------
+% PACKAGES DE BASE
+% --------------------------------------------------------------------------
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[french]{babel}
+\RequirePackage{lmodern}
+\RequirePackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\RequirePackage[dvipsnames, table]{xcolor}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{setspace}
+\RequirePackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage{array}
+\usetikzlibrary{calc, shadings}
+
+% --------------------------------------------------------------------------
+% PALETTE DE COULEURS
+% --------------------------------------------------------------------------
+\definecolor{bleucanard}{RGB}{0, 102, 102}
+\definecolor{doré}{RGB}{212, 175, 55}
+\definecolor{FondGris}{RGB}{248, 249, 250}
+\definecolor{OrangeENSPY}{RGB}{230, 115, 0}
+\definecolor{BleuPetrole}{RGB}{29, 72, 81}
+\definecolor{BleuCiel}{RGB}{173, 216, 230}
+\definecolor{Noir}{RGB}{0, 0, 0}
+
+% --------------------------------------------------------------------------
+% CONFIGURATION TYPOGRAPHIQUE
+% --------------------------------------------------------------------------
+\setstretch{1.2}
+\color{black}
+
+% --------------------------------------------------------------------------
+% FILET DÉGRADÉ (s'efface vers la droite)
+% --------------------------------------------------------------------------
+\newcommand{\degradeRule}[2]{%
+  \begin{tikzpicture}
+    \shade[left color=#1, right color=white]
+      (0,0) rectangle (\linewidth, #2);
+  \end{tikzpicture}%
+}
+
+% --------------------------------------------------------------------------
+% STYLE DES SECTIONS
+% --------------------------------------------------------------------------
+\titleformat{\section}
+    {\color{bleucanard}\Large\bfseries}
+    {\thesection.}{0.5em}{}
+    [{\degradeRule{bleucanard}{1.5pt}}]      % ← dégradé bleu canard
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2ex plus .2ex}
+
+\titleformat{\subsection}
+    {\color{bleucanard}\large\bfseries}
+    {\thesubsection}{0.7em}{}
+    [{\degradeRule{doré}{1pt}}]              % ← dégradé doré
+\titlespacing*{\subsection}{0pt}{2.5ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\subsubsection}
+    {\color{bleucanard}\normalsize\bfseries}
+    {\thesubsubsection}{0.7em}{}
+    [{\degradeRule{bleucanard}{0.8pt}}]      % ← dégradé bleu canard fin
+\titlespacing*{\subsubsection}{0pt}{2ex plus .5ex minus .2ex}{1ex plus .2ex}
+
+% --------------------------------------------------------------------------
+% BOÎTE QUALITY GATE
+% --------------------------------------------------------------------------
+\newtcolorbox{qgbox}[1]{
+    enhanced, breakable,
+    colback=FondGris, colframe=bleucanard,
+    arc=0pt, outer arc=0pt, boxrule=0.5pt, leftrule=5pt,
+    fonttitle=\bfseries\sffamily, coltitle=doré,
+    title={\tikz[baseline=-0.6ex]\draw[fill=doré, draw=none] circle (0.4em);\space Quality Gate : #1},
+    attach title to upper, after title={\par\medskip},
+    before skip=25pt, after skip=25pt,
+    fontupper=\small\color{black}
+}
+
+% --------------------------------------------------------------------------
+% BOÎTE REMARQUE
+% --------------------------------------------------------------------------
+\newtcolorbox{remarquebox}[1][Remarque]{
+    enhanced, breakable,
+    colback=FondGris, colframe=bleucanard,
+    arc=3pt, outer arc=3pt, boxrule=0.5pt, leftrule=4pt,
+    fonttitle=\bfseries\sffamily\small, coltitle=bleucanard,
+    title={\tikz[baseline=-0.6ex]\draw[fill=bleucanard, draw=none] circle (0.4em);\space #1},
+    attach title to upper, after title={\par\smallskip},
+    before skip=15pt, after skip=15pt,
+    fontupper=\small\color{black}
+}
+
+% --------------------------------------------------------------------------
+% BOÎTE DÉFINITION
+% --------------------------------------------------------------------------
+\newtcolorbox{definitionbox}[1][Définition]{
+    enhanced, breakable,
+    colback=FondGris, colframe=doré,
+    arc=3pt, outer arc=3pt, boxrule=0.5pt, leftrule=4pt,
+    fonttitle=\bfseries\sffamily\small, coltitle=doré,
+    title={\tikz[baseline=-0.6ex]\draw[fill=doré, draw=none] circle (0.4em);\space #1},
+    attach title to upper, after title={\par\smallskip},
+    before skip=15pt, after skip=15pt,
+    fontupper=\small\color{black}
+}
+
+% --------------------------------------------------------------------------
+% LISTES
+% --------------------------------------------------------------------------
+\setlist[itemize]{label=\color{doré}$\bullet$, itemsep=0.8ex}
+\setlist[enumerate]{label=\color{bleucanard}\textbf{\arabic*.}, itemsep=0.8ex}
+
+% --------------------------------------------------------------------------
+% HYPERLIENS
+% --------------------------------------------------------------------------
+\RequirePackage[colorlinks=true, linkcolor=bleucanard,
+                urlcolor=doré, citecolor=bleucanard]{hyperref}
+
+% --------------------------------------------------------------------------
+% VARIABLES DE LA PAGE DE TITRE
+% --------------------------------------------------------------------------
+\newcommand{\titreTravaux}[1]{\def\@titreTravaux{#1}}
+\newcommand{\sousTitre}[1]{\def\@sousTitre{#1}}
+\newcommand{\optionEtude}[1]{\def\@optionEtude{#1}}
+\newcommand{\auteur}[1]{\def\@auteur{#1}}
+\newcommand{\encadrant}[1]{\def\@encadrant{#1}}
+\newcommand{\anneeAcad}[1]{\def\@anneeAcad{#1}}
+\newcommand{\logoenspy}[1]{\def\@logoenspy{#1}}
+
+% Valeurs par défaut
+\def\@titreTravaux{TECHNIQUES D'INVESTIGATION NUMÉRIQUE AVANCÉES}
+\def\@sousTitre{RÉSUMÉ DU PIU}
+\def\@optionEtude{Cybersécurité et Investigation Numérique}
+\def\@auteur{NGWAMBE MARIELLA, 22P040}
+\def\@encadrant{M. MINKA THIERRY}
+\def\@anneeAcad{2025 / 2026}
+\def\@logoenspy{enspy.png}
+
+% --------------------------------------------------------------------------
+% COMMANDE \MakeTitleENSPY
+% --------------------------------------------------------------------------
+\newcommand{\MakeTitleENSPY}{%
+\begin{titlepage}
+  % Cadre décoratif TikZ
+  \begin{tikzpicture}[remember picture, overlay, inner sep=0, outer sep=0]
+    \draw[BleuPetrole, line width=4pt]
+      ([xshift=-1.5cm, yshift=-2cm]current page.north east) coordinate (A) --
+      ([xshift= 1.5cm, yshift=-2cm]current page.north west) coordinate (B) --
+      ([xshift= 1.5cm, yshift= 2cm]current page.south west) coordinate (C) --
+      ([xshift=-1.5cm, yshift= 2cm]current page.south east) coordinate (D) --
+      cycle;
+    \draw[bleucanard, line width=0.8pt]
+      ([yshift= 0.5cm, xshift=-0.5cm]A) --
+      ([yshift= 0.5cm, xshift= 0.5cm]B) --
+      ([yshift=-0.5cm, xshift= 0.5cm]B) --
+      ([yshift=-0.5cm, xshift=-0.5cm]B) --
+      ([yshift= 0.5cm, xshift=-0.5cm]C) --
+      ([yshift= 0.5cm, xshift= 0.5cm]C) --
+      ([yshift=-0.5cm, xshift= 0.5cm]C) --
+      ([yshift=-0.5cm, xshift=-0.5cm]D) --
+      ([yshift= 0.5cm, xshift=-0.5cm]D) --
+      ([yshift= 0.5cm, xshift= 0.5cm]D) --
+      ([yshift=-0.5cm, xshift= 0.5cm]A) --
+      ([yshift=-0.5cm, xshift=-0.5cm]A) --
+      ([yshift= 0.5cm, xshift=-0.5cm]A);
+    \draw[BleuPetrole, line width=0.8pt]
+      ([yshift=-0.3cm, xshift= 0.3cm]A) --
+      ([yshift=-0.3cm, xshift=-0.3cm]B) --
+      ([yshift= 0.3cm, xshift=-0.3cm]B) --
+      ([yshift= 0.3cm, xshift= 0.3cm]B) --
+      ([yshift=-0.3cm, xshift= 0.3cm]C) --
+      ([yshift=-0.3cm, xshift=-0.3cm]C) --
+      ([yshift= 0.3cm, xshift=-0.3cm]C) --
+      ([yshift= 0.3cm, xshift= 0.3cm]D) --
+      ([yshift=-0.3cm, xshift= 0.3cm]D) --
+      ([yshift=-0.3cm, xshift=-0.3cm]D) --
+      ([yshift= 0.3cm, xshift=-0.3cm]A) --
+      ([yshift= 0.3cm, xshift= 0.3cm]A) --
+      ([yshift=-0.3cm, xshift= 0.3cm]A);
+  \end{tikzpicture}
+
+  % En-tête institutionnel bilingue + logo
+  \noindent
+  \begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \footnotesize\textbf{RÉPUBLIQUE DU CAMEROUN}       \\[-1pt]
+    \scriptsize\textbf{*********}                      \\[-1pt]
+    \scriptsize\textbf{Paix -- Travail -- Patrie}      \\[-1pt]
+    \scriptsize\textbf{*********}                      \\[-1pt]
+    \footnotesize\textbf{Université de Yaoundé 1}      \\[-1pt]
+    \scriptsize\textbf{*********}                      \\[-1pt]
+    \footnotesize\textbf{Ecole Nationale Supérieure Polytechnique De Yaoundé} \\[-1pt]
+    \scriptsize\textbf{*********}                      \\[-1pt]
+    \normalsize\textbf{Département Du Génie Informatique}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[c]{0.20\textwidth}
+    \centering
+    \includegraphics[height=4cm, width=2.8cm]{\@logoenspy}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \footnotesize\textbf{REPUBLIC OF CAMEROON}         \\[-1pt]
+    \scriptsize\textbf{*********}                      \\[-1pt]
+    \scriptsize\textbf{Peace -- Work -- Fatherland}    \\[-1pt]
+    \scriptsize\textbf{*********}                      \\[-1pt]
+    \footnotesize\textbf{University of Yaoundé 1}      \\[-1pt]
+    \scriptsize\textbf{*********}                      \\[-1pt]
+    \footnotesize\textbf{National Advanced School of Engineering Of Yaoundé} \\[-1pt]
+    \scriptsize\textbf{*********}                      \\[-1pt]
+    \normalsize\textbf{Computer Engineering Department}
+  \end{minipage}
+
+  \vspace{0.4cm}
+  \begin{center}
+    {\color{bleucanard}\noindent\rule{\textwidth}{0.7mm}}
+    \vspace{0.3cm}
+
+    {\Large\textbf{\@titreTravaux}}\\[4pt]
+    \ifx\@sousTitre\empty\else
+      {\Large\textbf{\textit{\@sousTitre}}}\\
+    \fi
+
+    \vspace{0.2cm}
+    {\color{bleucanard}\noindent\rule{\textwidth}{0.7mm}}
+  \end{center}
+
+  \vspace{0.4cm}
+  \begin{center}
+    \normalsize\textbf{Option~:}\\[2pt]
+    \textsl{\@optionEtude}
+  \end{center}
+
+  \vspace{0.5cm}
+  \begin{center}
+    \textbf{Rédigé par~:}\\[4pt]
+    \textsl{\textbf{\@auteur}}
+  \end{center}
+
+  \vspace{0.4cm}
+  \begin{center}
+    \textbf{Sous l'encadrement de~:}\\[4pt]
+    \textsl{\@encadrant}
+  \end{center}
+
+  \vfill
+  \begin{center}
+    \textbf{Année académique \@anneeAcad}
+  \end{center}
+  \vspace{0.5cm}
+\end{titlepage}
+}
+
+% ==============================================================================
+% FIN DU PACKAGE
+% ==============================================================================

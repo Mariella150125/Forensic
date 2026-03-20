@@ -1,0 +1,97 @@
+% ==============================================================================
+% Fichier     : main.tex
+% Description : Document principal — PIU
+%               Charge le style, génère la page de titre, appelle le contenu
+% ==============================================================================
+\documentclass[12pt, a4paper]{article}
+
+% --- Feuille de style ---
+\usepackage{Style_Devoir}
+
+% --- Métadonnées PDF ---
+\hypersetup{
+    pdftitle   = {NGWAMBE MARIELLA — RÉSUMÉ PIU},
+    pdfauthor  = {NGWAMBE MARIELLA},
+    pdfsubject = {Processus Investigatif Universel},
+    pdfkeywords= {PIU, Investigation, Quality Gates, Méthodologie}
+}
+
+% ------------------------------------------------------------------------------
+% INFORMATIONS DE LA PAGE DE TITRE
+% (modifier uniquement ces lignes pour chaque nouveau devoir)
+% ------------------------------------------------------------------------------
+\titreTravaux{TECHNIQUES D'INVESTIGATION NUMÉRIQUE AVANCÉES}
+\sousTitre{RÉSUMÉ DU PIU}
+\optionEtude{Cybersécurité et Investigation Numérique}
+\auteur{NGWAMBE BEKWADI MARIELLA, 22P040}
+\encadrant{M. Thierry MINKA}
+\anneeAcad{2025 / 2026}
+\logoenspy{enspy.png}
+
+% ==============================================================================
+\begin{document}
+% ==============================================================================
+
+% ------------------------------------------------------------------------------
+% PAGE DE TITRE INSTITUTIONNELLE
+% ------------------------------------------------------------------------------
+\MakeTitleENSPY
+
+% ------------------------------------------------------------------------------
+% TABLE DES MATIÈRES
+% ------------------------------------------------------------------------------
+\tableofcontents
+\newpage
+
+% ------------------------------------------------------------------------------
+% EN-TÊTE DESIGN (page de résumé)
+% ------------------------------------------------------------------------------
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+    % Bande latérale gauche
+    \fill[BleuPetrole]
+        (current page.north west)
+        rectangle
+        ([xshift=0.8cm] current page.south west);
+    % Accent doré en haut à droite
+    \fill[doré]
+        ([xshift=-4cm] current page.north east)
+        rectangle
+        ([yshift=-0.6cm] current page.north east);
+\end{tikzpicture}
+
+\begin{flushleft}
+    \vspace*{-1cm}
+    \hspace{0.9cm}% décalage pour ne pas chevaucher la bande bleue
+    \begin{minipage}{0.85\textwidth}
+        {\color{bleucanard}\rule{\linewidth}{1.5pt}}\\[2ex]
+        {\color{BleuPetrole}\Huge\bfseries
+        Résumé — Processus Investigatif Universel (PIU)}\\[0.5ex]
+        {\color{bleucanard}\rule{\linewidth}{1.5pt}}
+    \end{minipage}
+\end{flushleft}
+
+\vspace{1cm}
+
+
+
+\vspace{1cm}
+
+% ------------------------------------------------------------------------------
+% CONTENU PRINCIPAL (fichier séparé)
+% ------------------------------------------------------------------------------
+\input{Contenu_PIU}
+
+% ------------------------------------------------------------------------------
+% PIED DE PAGE FINAL
+% ------------------------------------------------------------------------------
+\vfill
+\begin{center}
+    {\color{bleucanard}\rule{0.3\linewidth}{0.5pt}}\\[1ex]
+    {\small\color{noir}ENSPY · CIN · 2025--2026}
+\end{center}
+
+% ==============================================================================
+\end{document}
+% ==============================================================================
